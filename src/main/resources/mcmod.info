@@ -1,0 +1,16 @@
+[
+{
+  "modid": "buildfur",
+  "name": "BuildFur",
+  "description": "BUILD FURNITURE FOR XUSTCRAFT",
+  "version": "1.0.0",
+  "mcversion": "${mcversion}",
+  "url": "https://github.com/Cinnaio/LoadModel",
+  "updateUrl": "",
+  "authorList": ["CINNAIO"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
