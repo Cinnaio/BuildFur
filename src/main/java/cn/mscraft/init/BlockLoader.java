@@ -16,6 +16,7 @@ public class BlockLoader {
     public static Block CONCRETE_WALL_WHITE_HALF = new concrete_wall_white_half();
     public static Block CONCRETE_CEILING_COLUMN_WHITE = new concrete_ceiling_column_white();
     public static Block CONCRETE_COLUMN_WHITE = new concrete_column_white();
+
     public static Block MARBLED_FLOOR_WHITE = new marbled_floor_white();
     public static Block MARBLED_FLOOR_BROWN = new marbled_floor_brown();
     public static Block MARBLED_FLOOR_BROWN_HALF = new marbled_floor_brown_half();
@@ -23,7 +24,15 @@ public class BlockLoader {
     public static Block WOODEN_DESK_BIRCH = new wooden_desk_birch();
     public static Block WOODEN_DESK_BIRCH_DOWNHALF = new wooden_desk_birch_downhalf();
     public static Block WOODEN_CHAIR_BIRCH = new wooden_chair_birch();
-    public static Block BLACKBOARD_GREEN = new blackboard_green();
+    public static Block WOODEN_CHAIR_TEACHBUILD_HEAD = new wooden_chair_teachbuild_head();
+    public static Block WOODEN_CHAIR_TEACHBUILD_ON = new wooden_chair_teachbuild_on();
+    public static Block WOODEN_CHAIR_TEACHBUILD_OFF = new wooden_chair_teachbuild_off();
+    public static Block WOODEN_TEACHING = new wooden_teaching();
+
+    public static Block BLACKBOARD_GREEN_LEFT = new blackboard_green_left();
+    public static Block BLACKBOARD_GREEN_MIDDLE = new blackboard_green_middle();
+    public static Block BLACKBOARD_GREEN_RIGHT = new blackboard_green_right();
+
     public static Block CEILLING_LIGHT = new ceilling_light();
 
     @SubscribeEvent
@@ -32,14 +41,24 @@ public class BlockLoader {
         event.getRegistry().register(CONCRETE_WALL_WHITE_HALF.setRegistryName("buildfur:concrete_wall_white_half"));
         event.getRegistry().register(CONCRETE_CEILING_COLUMN_WHITE.setRegistryName("buildfur:concrete_ceiling_column_white"));
         event.getRegistry().register(CONCRETE_COLUMN_WHITE.setRegistryName("buildfur:concrete_column_white"));
+
         event.getRegistry().register(MARBLED_FLOOR_WHITE.setRegistryName("buildfur:marbled_floor_white"));
         event.getRegistry().register(MARBLED_FLOOR_BROWN.setRegistryName("buildfur:marbled_floor_brown"));
         event.getRegistry().register(MARBLED_FLOOR_BROWN_HALF.setRegistryName("buildfur:marbled_floor_brown_half"));
 
         event.getRegistry().register(WOODEN_DESK_BIRCH.setRegistryName("buildfur:wooden_desk_birch"));
         event.getRegistry().register(WOODEN_DESK_BIRCH_DOWNHALF.setRegistryName("buildfur:wooden_desk_birch_downhalf"));
+
         event.getRegistry().register(WOODEN_CHAIR_BIRCH.setRegistryName("buildfur:wooden_chair_birch"));
-        event.getRegistry().register(BLACKBOARD_GREEN.setRegistryName("buildfur:blackboard_green"));
+        event.getRegistry().register(WOODEN_CHAIR_TEACHBUILD_HEAD.setRegistryName("buildfur:wooden_chair_teachbuild_head"));
+        event.getRegistry().register(WOODEN_CHAIR_TEACHBUILD_ON.setRegistryName("buildfur:wooden_chair_teachbuild_on"));
+        event.getRegistry().register(WOODEN_CHAIR_TEACHBUILD_OFF.setRegistryName("buildfur:wooden_chair_teachbuild_off"));
+        event.getRegistry().register(WOODEN_TEACHING.setRegistryName("buildfur:wooden_teaching"));
+
+        event.getRegistry().register(BLACKBOARD_GREEN_LEFT.setRegistryName("buildfur:blackboard_green_left"));
+        event.getRegistry().register(BLACKBOARD_GREEN_MIDDLE.setRegistryName("buildfur:blackboard_green_middle"));
+        event.getRegistry().register(BLACKBOARD_GREEN_RIGHT.setRegistryName("buildfur:blackboard_green_right"));
+
         event.getRegistry().register(CEILLING_LIGHT.setRegistryName("buildfur:ceilling_light"));
     }
 
@@ -49,6 +68,7 @@ public class BlockLoader {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(CONCRETE_WALL_WHITE_HALF),0,new ModelResourceLocation(CONCRETE_WALL_WHITE_HALF.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(CONCRETE_CEILING_COLUMN_WHITE),0,new ModelResourceLocation(CONCRETE_CEILING_COLUMN_WHITE.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(CONCRETE_COLUMN_WHITE),0,new ModelResourceLocation(CONCRETE_COLUMN_WHITE.getRegistryName(),"inventory"));
+
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(MARBLED_FLOOR_WHITE),0,new ModelResourceLocation(MARBLED_FLOOR_WHITE.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(MARBLED_FLOOR_BROWN),0,new ModelResourceLocation(MARBLED_FLOOR_BROWN.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(MARBLED_FLOOR_BROWN_HALF),0,new ModelResourceLocation(MARBLED_FLOOR_BROWN_HALF.getRegistryName(),"inventory"));
@@ -56,7 +76,15 @@ public class BlockLoader {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WOODEN_DESK_BIRCH),0,new ModelResourceLocation(WOODEN_DESK_BIRCH.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WOODEN_DESK_BIRCH_DOWNHALF),0,new ModelResourceLocation(WOODEN_DESK_BIRCH_DOWNHALF.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WOODEN_CHAIR_BIRCH),0,new ModelResourceLocation(WOODEN_CHAIR_BIRCH.getRegistryName(),"inventory"));
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(BLACKBOARD_GREEN),0,new ModelResourceLocation(BLACKBOARD_GREEN.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WOODEN_CHAIR_TEACHBUILD_HEAD),0,new ModelResourceLocation(WOODEN_CHAIR_TEACHBUILD_HEAD.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WOODEN_CHAIR_TEACHBUILD_ON),0,new ModelResourceLocation(WOODEN_CHAIR_TEACHBUILD_ON.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WOODEN_CHAIR_TEACHBUILD_OFF),0,new ModelResourceLocation(WOODEN_CHAIR_TEACHBUILD_OFF.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WOODEN_TEACHING),0,new ModelResourceLocation(WOODEN_TEACHING.getRegistryName(),"inventory"));
+
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(BLACKBOARD_GREEN_LEFT),0,new ModelResourceLocation(BLACKBOARD_GREEN_LEFT.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(BLACKBOARD_GREEN_MIDDLE),0,new ModelResourceLocation(BLACKBOARD_GREEN_MIDDLE.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(BLACKBOARD_GREEN_RIGHT),0,new ModelResourceLocation(BLACKBOARD_GREEN_RIGHT.getRegistryName(),"inventory"));
+
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(CEILLING_LIGHT),0,new ModelResourceLocation(CEILLING_LIGHT.getRegistryName(),"inventory"));
 
     }

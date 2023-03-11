@@ -14,12 +14,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class blackboard_green extends Block {
+public class wooden_chair_teachbuild_off extends Block {
 
-    public blackboard_green() {
+    public wooden_chair_teachbuild_off() {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB2);
-        setUnlocalizedName("buildfur.blackboard_green");
+        setUnlocalizedName("buildfur.wooden_chair_teachbuild_off");
         setLightLevel(0.5F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
@@ -55,11 +55,20 @@ public class blackboard_green extends Block {
 
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-        return new AxisAlignedBB(0, 0, 0, 0.5, 1, 1);
+        int blockFacing = state.getValue(FACING).getHorizontalIndex();
+
+        if (blockFacing == 2 || blockFacing == 0) {
+            AxisAlignedBB AABB = new AxisAlignedBB(0, 0, 0.2, 1, 1, 0.8);
+            return AABB.offset(0, 0, -1);
+        }
+        else {
+            AxisAlignedBB AABB = new AxisAlignedBB(0.2, 0, 0, 0.8, 1, 1);
+            return AABB.offset(1, 0, 0);
+        }
     }
 
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing()));
+        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()));
     }
 }
