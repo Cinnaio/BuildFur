@@ -9,17 +9,16 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class wooden_desk_birch_downhalf extends Block {
+public class projector_old_column_right_off extends Block {
 
-    public wooden_desk_birch_downhalf() {
+    public projector_old_column_right_off() {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB2);
-        setUnlocalizedName("buildfur.wooden_desk_birch_downhalf");
+        setUnlocalizedName("buildfur.projector_old_column_right_off");
+        setLightLevel(0.5F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 

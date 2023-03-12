@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "buildfur:wooden_chair_birch_double",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "buildfur:wooden_chair_birch_double",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=south": {
+      "model": "buildfur:wooden_chair_birch_double",
+      "uvlock": false
+    },
+    "facing=west": {
+      "model": "buildfur:wooden_chair_birch_double",
+      "y": 270,
+      "uvlock": false
+    }
+  }
+}

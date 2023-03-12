@@ -1,0 +1,58 @@
+{
+	"credit": "CINNAIO MADED",
+	"textures": {
+		"0": "buildfur:block/marbled_floor_turquoise",
+		"particle": "buildfur:block/marbled_floor_turquoise"
+	},
+	"elements": [
+		{
+			"from": [-8, 0, -8],
+			"to": [24, 16, 24],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [68, 0, 0],
+			"translation": [0, 0, -2.5],
+			"scale": [0.2, 0.4, 0.2]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [68, 0, 0],
+			"translation": [0, 0, -2.5],
+			"scale": [0.2, 0.4, 0.2]
+		},
+		"firstperson_righthand": {
+			"translation": [0, 1.75, 0],
+			"scale": [0.2, 0.4, 0.2]
+		},
+		"firstperson_lefthand": {
+			"translation": [0, 1.75, 0],
+			"scale": [0.2, 0.4, 0.2]
+		},
+		"ground": {
+			"translation": [0, -1, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"gui": {
+			"rotation": [17, 15, 0],
+			"translation": [0.25, -0.25, 0],
+			"scale": [0.2, 0.4, 0.2]
+		},
+		"head": {
+			"translation": [0, -27, -2],
+			"scale": [2, 2, 2]
+		},
+		"fixed": {
+			"translation": [0, 0, -5],
+			"scale": [0.2, 0.4, 0.2]
+		}
+	}
+}

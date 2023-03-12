@@ -1,20 +1,20 @@
 {
   "variants": {
     "facing=north": {
-      "model": "buildfur:wooden_desk_birch_downhalf",
+      "model": "buildfur:projector_old",
       "y": 180
     },
     "facing=east": {
-      "model": "buildfur:wooden_desk_birch_downhalf",
+      "model": "buildfur:projector_old",
       "y": 90,
       "uvlock": false
     },
     "facing=south": {
-      "model": "buildfur:wooden_desk_birch_downhalf",
+      "model": "buildfur:projector_old",
       "uvlock": false
     },
     "facing=west": {
-      "model": "buildfur:wooden_desk_birch_downhalf",
+      "model": "buildfur:projector_old",
       "y": 270,
       "uvlock": false
     }
