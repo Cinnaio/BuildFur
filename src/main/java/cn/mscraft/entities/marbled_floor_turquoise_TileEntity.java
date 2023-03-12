@@ -11,7 +11,7 @@ public class marbled_floor_turquoise_TileEntity extends TileEntity {
     }
 
     @Override
-    public NBTTagCompound writeToNBT(NBTTagCompound tag) {)
+    public NBTTagCompound writeToNBT(NBTTagCompound tag) {
         return super.writeToNBT(tag);
     }
 }
