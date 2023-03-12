@@ -12,12 +12,12 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class wooden_chair_birch extends Block {
+public class wooden_desk_birch_middle extends Block {
 
-    public wooden_chair_birch() {
+    public wooden_desk_birch_middle() {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB2);
-        setUnlocalizedName("buildfur.wooden_chair_birch");
+        setUnlocalizedName("buildfur.wooden_desk_birch_middle");
         setLightLevel(0.5F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }

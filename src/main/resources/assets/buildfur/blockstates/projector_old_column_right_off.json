@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "buildfur:projector_old_column_right_off",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "buildfur:projector_old_column_right_off",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=south": {
+      "model": "buildfur:projector_old_column_right_off",
+      "uvlock": false
+    },
+    "facing=west": {
+      "model": "buildfur:projector_old_column_right_off",
+      "y": 270,
+      "uvlock": false
+    }
+  }
+}

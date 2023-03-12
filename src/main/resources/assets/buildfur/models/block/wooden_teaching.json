@@ -2,9 +2,9 @@
 	"credit": "CINNAIO MADED",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "buildfur:block/xust_icon_logo",
+		"0": "buildfur:block/icon_xust",
 		"1": "buildfur:block/wooden_desk_birch",
-		"particle": "buildfur:block/xust_icon_logo"
+		"particle": "buildfur:block/icon_xust"
 	},
 	"elements": [
 		{
