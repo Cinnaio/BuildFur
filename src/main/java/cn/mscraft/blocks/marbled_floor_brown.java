@@ -1,57 +1,122 @@
 package cn.mscraft.blocks;
 
 import cn.mscraft.XUST;
-import net.minecraft.block.Block;
+import cn.mscraft.init.BlockLoader;
+import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
+import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class marbled_floor_brown extends Block {
+import java.util.Random;
+
+public abstract class marbled_floor_brown extends BlockSlab {
+
+    public static final PropertyEnum<Variant> VARIANT = PropertyEnum.<Variant>create("variant", Variant.class);
 
     public marbled_floor_brown() {
         super(Material.ROCK);
-        setCreativeTab(XUST.MY_TAB1);
-        setUnlocalizedName("buildfur.marbled_floor_brown");
-        setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+        setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, Variant.DEFAULT));
+
+        if (!this.isDouble()) {
+            this.blockState.getBaseState().withProperty(VARIANT, Variant.DEFAULT);
+        }
     }
 
     @Override
-    public boolean isOpaqueCube(IBlockState state) {
-        return false;
+    public String getUnlocalizedName(int meta) {
+        return super.getUnlocalizedName();
     }
 
     @Override
-    public boolean isFullCube(IBlockState state) {
-        return false;
+    public IProperty<?> getVariantProperty() {
+        return VARIANT;
     }
 
-    private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+    @Override
+    public Comparable<?> getTypeForItem(ItemStack stack) {
+        return Variant.DEFAULT;
+    }
+
+    @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Item.getItemFromBlock(BlockLoader.MARBLED_FLOOR_BROWN_HALF);
+    }
+
+    @Override
+    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
+        return new ItemStack(BlockLoader.MARBLED_FLOOR_BROWN_HALF);
+    }
+
+    @Override
+    public final IBlockState getStateFromMeta(final int meta) {
+        IBlockState blockstate = this.blockState.getBaseState().withProperty(VARIANT, Variant.DEFAULT);
+
+        if(!this.isDouble()) {
+            blockstate = blockstate.withProperty(HALF, ((meta&8)!=0)?EnumBlockHalf.TOP:EnumBlockHalf.BOTTOM);
+        }
+
+        return blockstate;
+    }
+
+    @Override
+    public final int getMetaFromState(final IBlockState state) {
+        int meta = 0;
+
+        if(!this.isDouble()&& state.getValue(HALF)==EnumBlockHalf.TOP) {
+            meta |= 8;
+        }
+
+        return meta;
+    }
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, FACING);
+        if(!this.isDouble()){
+            return new BlockStateContainer(this, new IProperty[] {VARIANT, HALF});
+        }
+        return new BlockStateContainer(this, new IProperty[] {VARIANT});
     }
 
-    @Override
-    public IBlockState getStateFromMeta(int meta) {
-        EnumFacing facing = EnumFacing.getHorizontal(meta & 0b0011);
-        return this.getDefaultState().withProperty(FACING, facing);
+    public static class Double extends marbled_floor_brown {
+        public Double() {
+            setUnlocalizedName("buildfur.marbled_floor_brown_double");
+        }
+
+        @Override
+        public boolean isDouble() {
+            return true;
+        }
     }
 
-    @Override
-    public int getMetaFromState(IBlockState state) {
-        int facing = state.getValue(FACING).getHorizontalIndex();
-        return facing;
+    public static class Half extends marbled_floor_brown {
+        public Half() {
+            setUnlocalizedName("buildfur.marbled_floor_brown_half");
+            setCreativeTab(XUST.MY_TAB1);
+        }
+
+        @Override
+        public boolean isDouble() {
+            return false;
+        }
     }
 
-    @Override
-    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()));
+    public static enum Variant implements IStringSerializable {
+        DEFAULT;
+
+        @Override
+        public String getName() {
+            return "default";
+        }
     }
 }
+

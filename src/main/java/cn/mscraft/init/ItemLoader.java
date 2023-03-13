@@ -3,6 +3,7 @@ package cn.mscraft.init;
 import cn.mscraft.init.BlockLoader;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemSlab;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -12,15 +13,17 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ItemLoader {
     @SubscribeEvent
     public static void registerItem(RegistryEvent.Register<Item> event){
+        // 半砖
+        event.getRegistry().register(new ItemSlab(BlockLoader.MARBLED_FLOOR_BROWN_HALF, BlockLoader.MARBLED_FLOOR_BROWN_HALF, BlockLoader.MARBLED_FLOOR_BROWN_DOUBLE).setRegistryName(BlockLoader.MARBLED_FLOOR_BROWN_HALF.getRegistryName()));
+
+        // 其他
         event.getRegistry().register(new ItemBlock(BlockLoader.CONCRETE_WALL_WHITE).setRegistryName("buildfur:concrete_wall_white"));
         event.getRegistry().register(new ItemBlock(BlockLoader.CONCRETE_WALL_WHITE_HALF).setRegistryName("buildfur:concrete_wall_white_half"));
         event.getRegistry().register(new ItemBlock(BlockLoader.CONCRETE_CEILING_COLUMN_WHITE).setRegistryName("buildfur:concrete_ceiling_column_white"));
         event.getRegistry().register(new ItemBlock(BlockLoader.CONCRETE_COLUMN_WHITE).setRegistryName("buildfur:concrete_column_white"));
 
         event.getRegistry().register(new ItemBlock(BlockLoader.MARBLED_FLOOR_WHITE).setRegistryName("buildfur:marbled_floor_white"));
-        event.getRegistry().register(new ItemBlock(BlockLoader.MARBLED_FLOOR_BROWN).setRegistryName("buildfur:marbled_floor_brown"));
-        event.getRegistry().register(new ItemBlock(BlockLoader.MARBLED_FLOOR_BROWN_HALF).setRegistryName("buildfur:marbled_floor_brown_half"));
-        event.getRegistry().register(new ItemBlock(BlockLoader.MARBLED_FLOOR_TURQUOISE).setRegistryName("buildfur:marbled_floor_turquoise"));
+//        event.getRegistry().register(new ItemBlock(BlockLoader.MARBLED_FLOOR_TURQUOISE).setRegistryName("buildfur:marbled_floor_turquoise"));
 
         event.getRegistry().register(new ItemBlock(BlockLoader.WOODEN_DESK_BIRCH).setRegistryName("buildfur:wooden_desk_birch"));
         event.getRegistry().register(new ItemBlock(BlockLoader.WOODEN_DESK_BIRCH_MIDDLE).setRegistryName("buildfur:wooden_desk_birch_middle"));
