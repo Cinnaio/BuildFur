@@ -53,19 +53,19 @@ public class wooden_chair_teachbuild_off extends Block {
         return facing;
     }
 
-    @Override
-    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-        int blockFacing = state.getValue(FACING).getHorizontalIndex();
-
-        if (blockFacing == 2 || blockFacing == 0) {
-            AxisAlignedBB AABB = new AxisAlignedBB(0, 0, 0.2, 1, 1, 0.8);
-            return AABB.offset(0, 0, -1);
-        }
-        else {
-            AxisAlignedBB AABB = new AxisAlignedBB(0.2, 0, 0, 0.8, 1, 1);
-            return AABB.offset(1, 0, 0);
-        }
-    }
+//    @Override
+//    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+//        int blockFacing = state.getValue(FACING).getHorizontalIndex();
+//
+//        if (blockFacing == 2 || blockFacing == 0) {
+//            AxisAlignedBB AABB = new AxisAlignedBB(0, 0, 0.2, 1, 1, 0.8);
+//            return AABB.offset(0, 0, -1);
+//        }
+//        else {
+//            AxisAlignedBB AABB = new AxisAlignedBB(0.2, 0, 0, 0.8, 1, 1);
+//            return AABB.offset(1, 0, 0);
+//        }
+//    }
 
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
