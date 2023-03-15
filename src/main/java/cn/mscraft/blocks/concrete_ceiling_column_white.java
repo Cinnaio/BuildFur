@@ -53,9 +53,9 @@ public class concrete_ceiling_column_white extends Block {
 
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-        int blockFacing = state.getValue(FACING).getHorizontalIndex();
+        int blockFacingIndex = state.getValue(FACING).getHorizontalIndex();
 
-        if (blockFacing == 1 || blockFacing == 3)
+        if (blockFacingIndex == 1 || blockFacingIndex == 3)
             return new AxisAlignedBB(0.25, 0, 0, 0.75, 1, 1);
         else
             return new AxisAlignedBB(0, 0, 0.25, 1, 1, 0.75);
