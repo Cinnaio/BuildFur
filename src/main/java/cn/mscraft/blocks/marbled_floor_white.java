@@ -14,10 +14,12 @@ import cn.mscraft.XUST;
 
 public class marbled_floor_white extends Block {
 
+    private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+
     public marbled_floor_white() {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB1);
-        setUnlocalizedName("buildfur.marbled_floor_white");
+        setUnlocalizedName("buildfur.marbled_floor_turquoise");
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 
@@ -30,8 +32,6 @@ public class marbled_floor_white extends Block {
     public boolean isFullCube(IBlockState state) {
         return false;
     }
-
-    private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
     @Override
     protected BlockStateContainer createBlockState() {

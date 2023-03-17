@@ -15,6 +15,9 @@ import net.minecraft.world.World;
 import cn.mscraft.XUST;
 
 public class concrete_wall_white_half extends Block {
+
+    private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+
     public concrete_wall_white_half() {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB1);
@@ -31,8 +34,6 @@ public class concrete_wall_white_half extends Block {
     public boolean isFullCube(IBlockState state) {
         return false;
     }
-
-    private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
     @Override
     protected BlockStateContainer createBlockState() {

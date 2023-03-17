@@ -16,6 +16,9 @@ import net.minecraft.world.World;
 
 public class blackboard_green_middle extends Block {
 
+    private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+
+
     public blackboard_green_middle() {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB2);
@@ -33,8 +36,6 @@ public class blackboard_green_middle extends Block {
     public boolean isFullCube(IBlockState state) {
         return false;
     }
-
-    private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
     @Override
     protected BlockStateContainer createBlockState() {

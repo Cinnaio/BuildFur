@@ -9,21 +9,17 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class blackboard_green_right extends Block {
+public class ceiling_light_wall extends Block {
 
     private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
-
-
-    public blackboard_green_right() {
+    public ceiling_light_wall() {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB2);
-        setUnlocalizedName("buildfur.blackboard_green_right");
-        setLightLevel(0.5F);
+        setUnlocalizedName("buildfur.ceiling_light_wall");
+        setLightLevel(1.0F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 
@@ -36,7 +32,6 @@ public class blackboard_green_right extends Block {
     public boolean isFullCube(IBlockState state) {
         return false;
     }
-
     @Override
     protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this, FACING);
@@ -56,6 +51,6 @@ public class blackboard_green_right extends Block {
 
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()));
+        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing()));
     }
 }

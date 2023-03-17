@@ -12,11 +12,11 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class ceilling_light extends Block {
-    public ceilling_light() {
+public class ceiling_light extends Block {
+    public ceiling_light() {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB2);
-        setUnlocalizedName("buildfur.ceilling_light");
+        setUnlocalizedName("buildfur.ceiling_light");
         setLightLevel(1.0F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }

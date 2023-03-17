@@ -1,20 +1,20 @@
 {
   "variants": {
     "facing=north": {
-      "model": "buildfur:ceilling_light",
+      "model": "buildfur:ceiling_light_wall",
       "y": 180
     },
     "facing=east": {
-      "model": "buildfur:ceilling_light",
+      "model": "buildfur:ceiling_light_wall",
       "y": 90,
       "uvlock": false
     },
     "facing=south": {
-      "model": "buildfur:ceilling_light",
+      "model": "buildfur:ceiling_light_wall",
       "uvlock": false
     },
     "facing=west": {
-      "model": "buildfur:ceilling_light",
+      "model": "buildfur:ceiling_light_wall",
       "y": 270,
       "uvlock": false
     }

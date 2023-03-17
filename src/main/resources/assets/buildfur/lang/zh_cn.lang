@@ -25,7 +25,8 @@ tile.buildfur.blackboard_green_left.name=黑板_左
 tile.buildfur.blackboard_green_middle.name=黑板_中
 tile.buildfur.blackboard_green_right.name=黑板_右
 
-tile.buildfur.ceilling_light.name=电灯
+tile.buildfur.ceiling_light.name=电灯
+tile.buildfur.ceiling_light_wall.name=电灯_讲台上
 
 tile.buildfur.projector_old.name=投影仪_旧
 tile.buildfur.projector_old_column_left_off.name=投影仪_影布_左_关

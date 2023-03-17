@@ -14,6 +14,8 @@ import net.minecraft.world.World;
 
 public class iron_teaching extends Block {
 
+    private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+
     public iron_teaching() {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB2);
@@ -31,8 +33,6 @@ public class iron_teaching extends Block {
     public boolean isFullCube(IBlockState state) {
         return false;
     }
-
-    private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
     @Override
     protected BlockStateContainer createBlockState() {

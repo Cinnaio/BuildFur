@@ -22,7 +22,7 @@ public class ItemLoader {
         event.getRegistry().register(new ItemBlock(BlockLoader.CONCRETE_CEILING_COLUMN_WHITE).setRegistryName("buildfur:concrete_ceiling_column_white"));
         event.getRegistry().register(new ItemBlock(BlockLoader.CONCRETE_COLUMN_WHITE).setRegistryName("buildfur:concrete_column_white"));
 
-        event.getRegistry().register(new ItemBlock(BlockLoader.MARBLED_FLOOR_WHITE).setRegistryName("buildfur:marbled_floor_white"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.MARBLED_FLOOR_WHITE).setRegistryName("buildfur:marbled_floor_turquoise"));
 //        event.getRegistry().register(new ItemBlock(BlockLoader.MARBLED_FLOOR_TURQUOISE).setRegistryName("buildfur:marbled_floor_turquoise"));
 
         event.getRegistry().register(new ItemBlock(BlockLoader.WOODEN_DESK_BIRCH).setRegistryName("buildfur:wooden_desk_birch"));
@@ -40,7 +40,8 @@ public class ItemLoader {
         event.getRegistry().register(new ItemBlock(BlockLoader.BLACKBOARD_GREEN_MIDDLE).setRegistryName("buildfur:blackboard_green_middle"));
         event.getRegistry().register(new ItemBlock(BlockLoader.BLACKBOARD_GREEN_RIGHT).setRegistryName("buildfur:blackboard_green_right"));
 
-        event.getRegistry().register(new ItemBlock(BlockLoader.CEILLING_LIGHT).setRegistryName("buildfur:ceilling_light"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.CEILING_LIGHT).setRegistryName("buildfur:ceiling_light"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.CEILING_LIGHT_WALL).setRegistryName("buildfur:ceiling_light_wall"));
 
         event.getRegistry().register(new ItemBlock(BlockLoader.PROJECTOR_OLD).setRegistryName("buildfur:projector_old"));
         event.getRegistry().register(new ItemBlock(BlockLoader.PROJECTOR_OLD_COLUMN_LEFT_OFF).setRegistryName("buildfur:projector_old_column_left_off"));

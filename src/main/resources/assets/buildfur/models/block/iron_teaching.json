@@ -2,11 +2,11 @@
 	"credit": "CINNAIO MADED",
 	"texture_size": [64, 64],
 	"textures": {
-		"1": "buildfur:block/iron_column_blue",
+		"1": "buildfur:block/iron_column_deepblue",
 		"2": "buildfur:block/icon_xust",
 		"3": "buildfur:block/iron_column_white",
-		"4": "buildfur:block/concrete_column_balck",
-		"particle": "buildfur:block/concrete_column_balck"
+		"4": "buildfur:block/iron_column_lowgray",
+		"particle": "buildfur:block/iron_column_lowgray"
 	},
 	"elements": [
 		{
@@ -122,8 +122,20 @@
 			}
 		},
 		{
-			"from": [2.5, 22.5, -6.275],
-			"to": [13.5, 23.5, -6.025],
+			"from": [0.5, 24.5, -6.275],
+			"to": [15.5, 25.5, -6.025],
+			"faces": {
+				"north": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"},
+				"east": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"},
+				"south": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"},
+				"west": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"},
+				"up": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"},
+				"down": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"}
+			}
+		},
+		{
+			"from": [-0.5, 25.5, -6.275],
+			"to": [16.5, 26, -6.025],
 			"faces": {
 				"north": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"},
 				"east": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"},
@@ -146,20 +158,8 @@
 			}
 		},
 		{
-			"from": [0.5, 24.5, -6.275],
-			"to": [15.5, 25.5, -6.025],
-			"faces": {
-				"north": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"},
-				"east": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"},
-				"south": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"},
-				"west": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"},
-				"up": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"},
-				"down": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"}
-			}
-		},
-		{
-			"from": [-0.5, 25.5, -6.275],
-			"to": [16.5, 26, -6.025],
+			"from": [2.5, 22.5, -6.275],
+			"to": [13.5, 23.5, -6.025],
 			"faces": {
 				"north": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"},
 				"east": {"uv": [4.28125, 6.46875, 7, 5.96875], "texture": "#1"},
@@ -220,8 +220,8 @@
 			}
 		},
 		{
-			"from": [-7, 3, -4.1],
-			"to": [23, 18, -4.1],
+			"from": [-5, 5, -4.1],
+			"to": [21, 17, -4.1],
 			"faces": {
 				"north": {"uv": [0, 0, 14.75, 6.40625], "texture": "#4"}
 			}
@@ -278,7 +278,17 @@
 			"name": "group",
 			"origin": [0, 0, 0],
 			"color": 0,
-			"children": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+			"children": [
+				{
+					"name": "group",
+					"origin": [0, 0, 0],
+					"color": 0,
+					"children": [9, 10, 11, 12, 13, 14, 15]
+				},
+				16,
+				17,
+				18
+			]
 		}
 	]
 }

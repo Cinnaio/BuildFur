@@ -15,6 +15,9 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class concrete_column_white extends Block {
+
+    private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+
     public concrete_column_white() {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB1);
@@ -31,8 +34,6 @@ public class concrete_column_white extends Block {
     public boolean isFullCube(IBlockState state) {
         return false;
     }
-
-    private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
     @Override
     protected BlockStateContainer createBlockState() {

@@ -1,18 +1,14 @@
 package cn.mscraft.init;
 
 import cn.mscraft.blocks.*;
-import cn.mscraft.entities.marbled_floor_turquoise_TileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemSlab;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod.EventBusSubscriber
 public class BlockLoader {
@@ -26,7 +22,7 @@ public class BlockLoader {
     public static Block CONCRETE_CEILING_COLUMN_WHITE = new concrete_ceiling_column_white();
     public static Block CONCRETE_COLUMN_WHITE = new concrete_column_white();
 
-    public static Block MARBLED_FLOOR_WHITE = new marbled_floor_white();
+    public static Block MARBLED_FLOOR_WHITE = new marbled_floor_turquoise();
 //    public static Block MARBLED_FLOOR_TURQUOISE = new marbled_floor_turquoise();
 
     public static Block WOODEN_DESK_BIRCH = new wooden_desk_birch();
@@ -44,7 +40,8 @@ public class BlockLoader {
     public static Block BLACKBOARD_GREEN_MIDDLE = new blackboard_green_middle();
     public static Block BLACKBOARD_GREEN_RIGHT = new blackboard_green_right();
 
-    public static Block CEILLING_LIGHT = new ceilling_light();
+    public static Block CEILING_LIGHT = new ceiling_light();
+    public static Block CEILING_LIGHT_WALL = new ceiling_light_wall();
 
     public static Block PROJECTOR_OLD = new projector_old();
     public static Block PROJECTOR_OLD_COLUMN_LEFT_OFF = new projector_old_column_left_off();
@@ -65,7 +62,7 @@ public class BlockLoader {
         event.getRegistry().register(CONCRETE_CEILING_COLUMN_WHITE.setRegistryName("buildfur:concrete_ceiling_column_white"));
         event.getRegistry().register(CONCRETE_COLUMN_WHITE.setRegistryName("buildfur:concrete_column_white"));
 
-        event.getRegistry().register(MARBLED_FLOOR_WHITE.setRegistryName("buildfur:marbled_floor_white"));
+        event.getRegistry().register(MARBLED_FLOOR_WHITE.setRegistryName("buildfur:marbled_floor_turquoise"));
 //        event.getRegistry().register(MARBLED_FLOOR_TURQUOISE.setRegistryName("buildfur:marbled_floor_turquoise"));
 
         event.getRegistry().register(WOODEN_DESK_BIRCH.setRegistryName("buildfur:wooden_desk_birch"));
@@ -83,7 +80,8 @@ public class BlockLoader {
         event.getRegistry().register(BLACKBOARD_GREEN_MIDDLE.setRegistryName("buildfur:blackboard_green_middle"));
         event.getRegistry().register(BLACKBOARD_GREEN_RIGHT.setRegistryName("buildfur:blackboard_green_right"));
 
-        event.getRegistry().register(CEILLING_LIGHT.setRegistryName("buildfur:ceilling_light"));
+        event.getRegistry().register(CEILING_LIGHT.setRegistryName("buildfur:ceiling_light"));
+        event.getRegistry().register(CEILING_LIGHT_WALL.setRegistryName("buildfur:ceiling_light_wall"));
 
         event.getRegistry().register(PROJECTOR_OLD.setRegistryName("buildfur:projector_old"));
         event.getRegistry().register(PROJECTOR_OLD_COLUMN_LEFT_OFF.setRegistryName("buildfur:projector_old_column_left_off"));
@@ -124,7 +122,8 @@ public class BlockLoader {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(BLACKBOARD_GREEN_MIDDLE),0,new ModelResourceLocation(BLACKBOARD_GREEN_MIDDLE.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(BLACKBOARD_GREEN_RIGHT),0,new ModelResourceLocation(BLACKBOARD_GREEN_RIGHT.getRegistryName(),"inventory"));
 
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(CEILLING_LIGHT),0,new ModelResourceLocation(CEILLING_LIGHT.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(CEILING_LIGHT),0,new ModelResourceLocation(CEILING_LIGHT.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(CEILING_LIGHT_WALL),0,new ModelResourceLocation(CEILING_LIGHT_WALL.getRegistryName(),"inventory"));
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(PROJECTOR_OLD),0,new ModelResourceLocation(PROJECTOR_OLD.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(PROJECTOR_OLD_COLUMN_LEFT_OFF),0,new ModelResourceLocation(PROJECTOR_OLD_COLUMN_LEFT_OFF.getRegistryName(),"inventory"));

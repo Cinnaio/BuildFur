@@ -16,6 +16,8 @@ import net.minecraft.world.World;
 
 public class wooden_chair_teachbuild_off extends Block {
 
+    private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+
     public wooden_chair_teachbuild_off() {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB2);
@@ -33,8 +35,6 @@ public class wooden_chair_teachbuild_off extends Block {
     public boolean isFullCube(IBlockState state) {
         return false;
     }
-
-    private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
     @Override
     protected BlockStateContainer createBlockState() {
