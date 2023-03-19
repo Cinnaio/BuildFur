@@ -21,15 +21,9 @@ public class MarbledFloorGrayOver extends Block {
 
     private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    protected static final AxisAlignedBB AABB_CENTER = new AxisAlignedBB(0, 0, 0, 1, 1, 1);
-    protected static final AxisAlignedBB AABB_CENTER_WEST = new AxisAlignedBB(0, 0, 0, -0.5, 1, 1);
-    protected static final AxisAlignedBB AABB_CENTER_EAST = new AxisAlignedBB(0, 0, 0, 0.5, 1, 1);
-    protected static final AxisAlignedBB AABB_CENTER_NORTH = new AxisAlignedBB(0, 0, 0, 1, 1, -0.5);
-    protected static final AxisAlignedBB AABB_CENTER_SOUTH = new AxisAlignedBB(0, 0, 0, 1, 1, 0.5);
-    protected static final AxisAlignedBB AABB_CENTER_A = new AxisAlignedBB(0, 0, 0, -0.5, 1, -0.5);
-    protected static final AxisAlignedBB AABB_CENTER_B = new AxisAlignedBB(0, 0, 0, 0.5, 1, -0.5);
-    protected static final AxisAlignedBB AABB_CENTER_C = new AxisAlignedBB(0, 0, 0, -0.5, 1, 0.5);
-    protected static final AxisAlignedBB AABB_CENTER_D = new AxisAlignedBB(0, 0, 0, 0.5, 1, 0.5);
+    protected static final AxisAlignedBB AABB_A = new AxisAlignedBB(0, 0, 0, 1, 1, 1);
+    protected static final AxisAlignedBB AABB_B = new AxisAlignedBB(1, 0, 0, 2, 1, 1);
+    protected static final AxisAlignedBB AABB_C = new AxisAlignedBB(0, 0, 0, 1, 1, -1);
 
     public MarbledFloorGrayOver() {
         super(Material.ROCK);
@@ -67,15 +61,9 @@ public class MarbledFloorGrayOver extends Block {
 
     @Deprecated
     public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn, boolean isActualState) {
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_CENTER);
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_CENTER_EAST);
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_CENTER_WEST);
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_CENTER_NORTH);
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_CENTER_SOUTH);
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_CENTER_A);
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_CENTER_B);
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_CENTER_C);
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_CENTER_D);
+        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_A);
+        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_B);
+        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_C);
     }
 
     @Override

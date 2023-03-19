@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "buildfur:marbled_floor_red",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "buildfur:marbled_floor_red",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=south": {
+      "model": "buildfur:marbled_floor_red",
+      "uvlock": false
+    },
+    "facing=west": {
+      "model": "buildfur:marbled_floor_red",
+      "y": 270,
+      "uvlock": false
+    }
+  }
+}
