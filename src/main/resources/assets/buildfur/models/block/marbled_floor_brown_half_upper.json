@@ -1,9 +1,0 @@
-{
-	"credit": "CINNAIO MADED",
-	"parent": "block/upper_slab",
-	"textures": {
-		"bottom": "buildfur:block/marbled_floor_brown",
-		"top": "buildfur:block/marbled_floor_brown",
-		"side": "buildfur:block/marbled_floor_brown"
-	}
-}

@@ -6,9 +6,9 @@ tile.buildfur.concrete_wall_white_half.name=水泥白色墙体_半
 tile.buildfur.concrete_ceiling_column_white.name=水泥白色天花板基柱
 tile.buildfur.concrete_column_white.name=水泥白色墙体基柱
 
-tile.buildfur.marbled_floor_white.name=大理石白色地板
-tile.buildfur.marbled_floor_brown.name=大理石灰色地板
-tile.buildfur.marbled_floor_brown_half.name=大理石灰色地板
+tile.buildfur.marbled_floor_turquoise.name=大理石青色地板
+tile.buildfur.marbled_floor_gray_over.name=大理石灰色地板
+tile.buildfur.marbled_floor_gray_half.name=大理石灰色地板
 
 tile.buildfur.wooden_desk_birch.name=桌
 tile.buildfur.wooden_desk_birch_middle.name=桌_中

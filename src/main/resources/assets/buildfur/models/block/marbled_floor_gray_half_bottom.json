@@ -1,0 +1,15 @@
+{
+	"credit": "CINNAIO MADED",
+	"parent": "block/half_slab",
+	"textures": {
+		"bottom": "buildfur:block/marbled_floor_gray",
+		"top": "buildfur:block/marbled_floor_gray",
+		"side": "buildfur:block/marbled_floor_gray"
+	},
+	"display": {
+		"gui": {
+			"rotation": [17, -42, 0],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
+}
