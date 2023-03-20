@@ -9,19 +9,18 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class MarbledFloorRed extends Block {
+public class IronHeating extends Block {
 
     private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    public MarbledFloorRed() {
+    public IronHeating() {
         super(Material.ROCK);
-        setCreativeTab(XUST.MY_TAB1);
-        setUnlocalizedName("buildfur.marbled_floor_red");
+        setCreativeTab(XUST.MY_TAB2);
+        setUnlocalizedName("buildfur.iron_heating");
+        setLightLevel(0.5F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 
@@ -54,6 +53,6 @@ public class MarbledFloorRed extends Block {
 
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()));
+        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing()));
     }
 }

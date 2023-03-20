@@ -7,8 +7,11 @@ tile.buildfur.concrete_ceiling_column_white.name=水泥白色天花板基柱
 tile.buildfur.concrete_column_white.name=水泥白色墙体基柱
 
 tile.buildfur.marbled_floor_turquoise.name=大理石青色地板
+tile.buildfur.marbled_floor_white.name=大理石白色地板
 tile.buildfur.marbled_floor_gray_over.name=大理石灰色地板
 tile.buildfur.marbled_floor_gray_half.name=大理石灰色地板
+tile.buildfur.marbled_floor_red.name=大理石红色地板
+tile.buildfur.marbled_floor_red_border.name=大理石红色地板_镶边
 
 tile.buildfur.wooden_desk_birch.name=桌
 tile.buildfur.wooden_desk_birch_middle.name=桌_中
@@ -20,6 +23,7 @@ tile.buildfur.wooden_chair_teachbuild_off.name=桌凳_关闭
 tile.buildfur.wooden_teaching.name=讲台
 
 tile.buildfur.iron_teaching.name=多媒体桌
+tile.buildfur.iron_heating.name=暖气片
 
 tile.buildfur.switch_light_on.name=电灯开关_开
 

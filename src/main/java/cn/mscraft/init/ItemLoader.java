@@ -25,6 +25,7 @@ public class ItemLoader {
         event.getRegistry().register(new ItemBlock(BlockLoader.MARBLED_FLOOR_GRAY_OVER).setRegistryName("buildfur:marbled_floor_gray_over"));
         event.getRegistry().register(new ItemBlock(BlockLoader.MARBLED_FLOOR_TURQUOISE).setRegistryName("buildfur:marbled_floor_turquoise"));
         event.getRegistry().register(new ItemBlock(BlockLoader.MARBLED_FLOOR_RED).setRegistryName("buildfur:marbled_floor_red"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.MARBLED_FLOOR_RED_BORDER).setRegistryName("buildfur:marbled_floor_red_border"));
 
         event.getRegistry().register(new ItemBlock(BlockLoader.WOODEN_DESK_BIRCH).setRegistryName("buildfur:wooden_desk_birch"));
         event.getRegistry().register(new ItemBlock(BlockLoader.WOODEN_DESK_BIRCH_MIDDLE).setRegistryName("buildfur:wooden_desk_birch_middle"));
@@ -36,8 +37,9 @@ public class ItemLoader {
         event.getRegistry().register(new ItemBlock(BlockLoader.WOODEN_TEACHING).setRegistryName("buildfur:wooden_teaching"));
 
         event.getRegistry().register(new ItemBlock(BlockLoader.IRON_TEACHING).setRegistryName("buildfur:iron_teaching"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.IRON_HEATING).setRegistryName("buildfur:iron_heating"));
 
-        event.getRegistry().register(new ItemBlock(BlockLoader.SwitchLightOn).setRegistryName("buildfur:switch_light_on"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.SWITCH_LIGHT_ON).setRegistryName("buildfur:switch_light_on"));
 
         event.getRegistry().register(new ItemBlock(BlockLoader.BLACKBOARD_GREEN_LEFT).setRegistryName("buildfur:blackboard_green_left"));
         event.getRegistry().register(new ItemBlock(BlockLoader.BLACKBOARD_GREEN_MIDDLE).setRegistryName("buildfur:blackboard_green_middle"));

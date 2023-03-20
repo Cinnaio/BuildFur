@@ -9,19 +9,17 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class MarbledFloorRed extends Block {
+public class MarbledFloorRedBorder extends Block {
 
     private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    public MarbledFloorRed() {
+    public MarbledFloorRedBorder() {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB1);
-        setUnlocalizedName("buildfur.marbled_floor_red");
+        setUnlocalizedName("buildfur.marbled_floor_red_border");
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 
@@ -51,6 +49,24 @@ public class MarbledFloorRed extends Block {
         int facing = state.getValue(FACING).getHorizontalIndex();
         return facing;
     }
+
+//    @Override
+//    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+//        int blockFacingIndex = state.getValue(FACING).getHorizontalIndex();
+//
+//        if (blockFacingIndex == 1 || blockFacingIndex == 3) {
+//            if (blockFacingIndex == 3)
+//                return new AxisAlignedBB(0, 0, 0, 0.5, 1, 1).offset(0.5, 0, 0);
+//            else
+//                return new AxisAlignedBB(0, 0, 0, 0.5, 1, 1);
+//        }
+//        else {
+//            if (blockFacingIndex == 2)
+//                return new AxisAlignedBB(0, 0, 0, 1, 1, 0.5).offset(0, 0, 0.5);
+//            else
+//                return new AxisAlignedBB(0, 0, 0, 1, 1, 0.5);
+//        }
+//    }
 
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {

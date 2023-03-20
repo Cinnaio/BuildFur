@@ -4,13 +4,11 @@ import cn.mscraft.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod.EventBusSubscriber
 public class BlockLoader {
@@ -28,6 +26,7 @@ public class BlockLoader {
     public static Block MARBLED_FLOOR_GRAY_OVER = new MarbledFloorGrayOver();
     public static Block MARBLED_FLOOR_TURQUOISE = new MarbledFloorTurquoise();
     public static Block MARBLED_FLOOR_RED = new MarbledFloorRed();
+    public static Block MARBLED_FLOOR_RED_BORDER = new MarbledFloorRedBorder();
 
     public static Block WOODEN_DESK_BIRCH = new WoodenDeskBirch();
     public static Block WOODEN_DESK_BIRCH_MIDDLE = new WoodenDeskBirchMiddle();
@@ -39,8 +38,9 @@ public class BlockLoader {
     public static Block WOODEN_TEACHING = new WoodenTeaching();
 
     public static Block IRON_TEACHING = new IronTeaching();
+    public static Block IRON_HEATING = new IronHeating();
 
-    public static Block SwitchLightOn = new SwitchLightOn();
+    public static Block SWITCH_LIGHT_ON = new SwitchLightOn();
 
     public static Block BLACKBOARD_GREEN_LEFT = new BlackboardGreenLeft();
     public static Block BLACKBOARD_GREEN_MIDDLE = new BlackboardGreenMiddle();
@@ -71,6 +71,7 @@ public class BlockLoader {
         event.getRegistry().register(MARBLED_FLOOR_GRAY_OVER.setRegistryName("buildfur:marbled_floor_gray_over"));
         event.getRegistry().register(MARBLED_FLOOR_TURQUOISE.setRegistryName("buildfur:marbled_floor_turquoise"));
         event.getRegistry().register(MARBLED_FLOOR_RED.setRegistryName("buildfur:marbled_floor_red"));
+        event.getRegistry().register(MARBLED_FLOOR_RED_BORDER.setRegistryName("buildfur:marbled_floor_red_border"));
 
         event.getRegistry().register(WOODEN_DESK_BIRCH.setRegistryName("buildfur:wooden_desk_birch"));
         event.getRegistry().register(WOODEN_DESK_BIRCH_MIDDLE.setRegistryName("buildfur:wooden_desk_birch_middle"));
@@ -82,8 +83,9 @@ public class BlockLoader {
         event.getRegistry().register(WOODEN_TEACHING.setRegistryName("buildfur:wooden_teaching"));
 
         event.getRegistry().register(IRON_TEACHING.setRegistryName("buildfur:iron_teaching"));
+        event.getRegistry().register(IRON_HEATING.setRegistryName("buildfur:iron_heating"));
 
-        event.getRegistry().register(SwitchLightOn.setRegistryName("buildfur:switch_light_on"));
+        event.getRegistry().register(SWITCH_LIGHT_ON.setRegistryName("buildfur:switch_light_on"));
 
         event.getRegistry().register(BLACKBOARD_GREEN_LEFT.setRegistryName("buildfur:blackboard_green_left"));
         event.getRegistry().register(BLACKBOARD_GREEN_MIDDLE.setRegistryName("buildfur:blackboard_green_middle"));
@@ -114,6 +116,7 @@ public class BlockLoader {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(MARBLED_FLOOR_GRAY_OVER),0,new ModelResourceLocation(MARBLED_FLOOR_GRAY_OVER.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(MARBLED_FLOOR_TURQUOISE),0,new ModelResourceLocation(MARBLED_FLOOR_TURQUOISE.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(MARBLED_FLOOR_RED),0,new ModelResourceLocation(MARBLED_FLOOR_RED.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(MARBLED_FLOOR_RED_BORDER),0,new ModelResourceLocation(MARBLED_FLOOR_RED_BORDER.getRegistryName(),"inventory"));
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WOODEN_DESK_BIRCH),0,new ModelResourceLocation(WOODEN_DESK_BIRCH.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WOODEN_DESK_BIRCH_MIDDLE),0,new ModelResourceLocation(WOODEN_DESK_BIRCH_MIDDLE.getRegistryName(),"inventory"));
@@ -125,8 +128,9 @@ public class BlockLoader {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WOODEN_TEACHING),0,new ModelResourceLocation(WOODEN_TEACHING.getRegistryName(),"inventory"));
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IRON_TEACHING),0,new ModelResourceLocation(IRON_TEACHING.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IRON_HEATING),0,new ModelResourceLocation(IRON_HEATING.getRegistryName(),"inventory"));
 
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(SwitchLightOn),0,new ModelResourceLocation(SwitchLightOn.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(SWITCH_LIGHT_ON),0,new ModelResourceLocation(SWITCH_LIGHT_ON.getRegistryName(),"inventory"));
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(BLACKBOARD_GREEN_LEFT),0,new ModelResourceLocation(BLACKBOARD_GREEN_LEFT.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(BLACKBOARD_GREEN_MIDDLE),0,new ModelResourceLocation(BLACKBOARD_GREEN_MIDDLE.getRegistryName(),"inventory"));
