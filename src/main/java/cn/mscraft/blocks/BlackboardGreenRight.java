@@ -16,7 +16,6 @@ public class BlackboardGreenRight extends Block {
 
     private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-
     public BlackboardGreenRight() {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB2);

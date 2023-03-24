@@ -48,6 +48,12 @@ public class ItemLoader {
         event.getRegistry().register(new ItemBlock(BlockLoader.CEILING_LIGHT).setRegistryName("buildfur:ceiling_light"));
         event.getRegistry().register(new ItemBlock(BlockLoader.CEILING_LIGHT_WALL).setRegistryName("buildfur:ceiling_light_wall"));
 
+        event.getRegistry().register(new ItemBlock(BlockLoader.WINDOWS_COLUMN_DOWN).setRegistryName("buildfur:windows_column_down"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.WINDOWS_COLUMN_UP).setRegistryName("buildfur:windows_column_up"));
+
+        event.getRegistry().register(new ItemBlock(BlockLoader.CURTAIN_TEACH).setRegistryName("buildfur:curtain_teach"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.CURTAIN_TEACH_CLOTH).setRegistryName("buildfur:curtain_teach_cloth"));
+
         event.getRegistry().register(new ItemBlock(BlockLoader.PROJECTOR_OLD).setRegistryName("buildfur:projector_old"));
         event.getRegistry().register(new ItemBlock(BlockLoader.PROJECTOR_OLD_COLUMN_LEFT_OFF).setRegistryName("buildfur:projector_old_column_left_off"));
         event.getRegistry().register(new ItemBlock(BlockLoader.PROJECTOR_OLD_COLUMN_RIGHT_OFF).setRegistryName("buildfur:projector_old_column_right_off"));

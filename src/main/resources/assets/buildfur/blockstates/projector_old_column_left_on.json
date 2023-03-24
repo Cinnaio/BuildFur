@@ -6,7 +6,7 @@
     },
     "facing=east": {
       "model": "buildfur:projector_old_column_left_on",
-      "y": 90,
+      "y": 270,
       "uvlock": false
     },
     "facing=south": {
@@ -15,7 +15,7 @@
     },
     "facing=west": {
       "model": "buildfur:projector_old_column_left_on",
-      "y": 270,
+      "y": 90,
       "uvlock": false
     }
   }

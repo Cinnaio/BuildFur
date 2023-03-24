@@ -49,6 +49,12 @@ public class BlockLoader {
     public static Block CEILING_LIGHT = new CeilingLight();
     public static Block CEILING_LIGHT_WALL = new CeilingLightWall();
 
+    public static Block WINDOWS_COLUMN_DOWN = new WindowColumnDown();
+    public static Block WINDOWS_COLUMN_UP = new WindowColumnUp();
+
+    public static Block CURTAIN_TEACH = new CurtainTeach();
+    public static Block CURTAIN_TEACH_CLOTH = new CurtainTeachCloth();
+
     public static Block PROJECTOR_OLD = new ProjectorOld();
     public static Block PROJECTOR_OLD_COLUMN_LEFT_OFF = new ProjectorOldColumnLeftOff();
     public static Block PROJECTOR_OLD_COLUMN_RIGHT_OFF = new ProjectorOldColumnRightOff();
@@ -94,6 +100,12 @@ public class BlockLoader {
         event.getRegistry().register(CEILING_LIGHT.setRegistryName("buildfur:ceiling_light"));
         event.getRegistry().register(CEILING_LIGHT_WALL.setRegistryName("buildfur:ceiling_light_wall"));
 
+        event.getRegistry().register(WINDOWS_COLUMN_DOWN.setRegistryName("buildfur:windows_column_down"));
+        event.getRegistry().register(WINDOWS_COLUMN_UP.setRegistryName("buildfur:windows_column_up"));
+
+        event.getRegistry().register(CURTAIN_TEACH.setRegistryName("buildfur:curtain_teach"));
+        event.getRegistry().register(CURTAIN_TEACH_CLOTH.setRegistryName("buildfur:curtain_teach_cloth"));
+
         event.getRegistry().register(PROJECTOR_OLD.setRegistryName("buildfur:projector_old"));
         event.getRegistry().register(PROJECTOR_OLD_COLUMN_LEFT_OFF.setRegistryName("buildfur:projector_old_column_left_off"));
         event.getRegistry().register(PROJECTOR_OLD_COLUMN_RIGHT_OFF.setRegistryName("buildfur:projector_old_column_right_off"));
@@ -138,6 +150,12 @@ public class BlockLoader {
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(CEILING_LIGHT),0,new ModelResourceLocation(CEILING_LIGHT.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(CEILING_LIGHT_WALL),0,new ModelResourceLocation(CEILING_LIGHT_WALL.getRegistryName(),"inventory"));
+
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WINDOWS_COLUMN_DOWN),0,new ModelResourceLocation(WINDOWS_COLUMN_DOWN.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WINDOWS_COLUMN_UP),0,new ModelResourceLocation(WINDOWS_COLUMN_UP.getRegistryName(),"inventory"));
+
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(CURTAIN_TEACH),0,new ModelResourceLocation(CURTAIN_TEACH.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(CURTAIN_TEACH_CLOTH),0,new ModelResourceLocation(CURTAIN_TEACH_CLOTH.getRegistryName(),"inventory"));
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(PROJECTOR_OLD),0,new ModelResourceLocation(PROJECTOR_OLD.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(PROJECTOR_OLD_COLUMN_LEFT_OFF),0,new ModelResourceLocation(PROJECTOR_OLD_COLUMN_LEFT_OFF.getRegistryName(),"inventory"));

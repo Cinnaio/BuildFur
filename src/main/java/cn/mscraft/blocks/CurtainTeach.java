@@ -9,17 +9,19 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlackboardGreenMiddle extends Block {
+public class CurtainTeach extends Block {
 
     private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    public BlackboardGreenMiddle() {
+    public CurtainTeach() {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB2);
-        setUnlocalizedName("buildfur.blackboard_green_middle");
+        setUnlocalizedName("buildfur.curtain_teach");
         setLightLevel(0.5F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
@@ -49,6 +51,16 @@ public class BlackboardGreenMiddle extends Block {
     public int getMetaFromState(IBlockState state) {
         int facing = state.getValue(FACING).getHorizontalIndex();
         return facing;
+    }
+
+    @Override
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+        EnumFacing blockFacing = state.getValue(FACING);
+
+        if (blockFacing == EnumFacing.WEST || blockFacing == EnumFacing.EAST)
+            return new AxisAlignedBB(0.25, 0, 0, 0.75, 0.5, 1);
+        else
+            return new AxisAlignedBB(0, 0, 0.25, 1, 0.5, 0.75);
     }
 
     @Override

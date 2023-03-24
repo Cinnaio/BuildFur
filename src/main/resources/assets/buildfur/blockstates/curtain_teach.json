@@ -1,20 +1,20 @@
 {
   "variants": {
     "facing=north": {
-      "model": "buildfur:blackboard_green_right",
+      "model": "buildfur:curtain_teach",
       "y": 180
     },
     "facing=east": {
-      "model": "buildfur:blackboard_green_right",
+      "model": "buildfur:curtain_teach",
       "y": 270,
       "uvlock": false
     },
     "facing=south": {
-      "model": "buildfur:blackboard_green_right",
+      "model": "buildfur:curtain_teach",
       "uvlock": false
     },
     "facing=west": {
-      "model": "buildfur:blackboard_green_right",
+      "model": "buildfur:curtain_teach",
       "y": 90,
       "uvlock": false
     }

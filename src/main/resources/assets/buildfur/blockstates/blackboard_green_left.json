@@ -6,7 +6,7 @@
     },
     "facing=east": {
       "model": "buildfur:blackboard_green_left",
-      "y": 90,
+      "y": 270,
       "uvlock": false
     },
     "facing=south": {
@@ -15,7 +15,7 @@
     },
     "facing=west": {
       "model": "buildfur:blackboard_green_left",
-      "y": 270,
+      "y": 90,
       "uvlock": false
     }
   }

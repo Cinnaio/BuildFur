@@ -34,6 +34,12 @@ tile.buildfur.blackboard_green_right.name=黑板_右
 tile.buildfur.ceiling_light.name=电灯
 tile.buildfur.ceiling_light_wall.name=电灯_讲台上
 
+tile.buildfur.windows_column_down.name=窗户_下部
+tile.buildfur.windows_column_up.name=窗户_上部
+
+tile.buildfur.curtain_teach.name=窗帘_杆
+tile.buildfur.curtain_teach_cloth.name=窗帘_布
+
 tile.buildfur.projector_old.name=投影仪_旧
 tile.buildfur.projector_old_column_left_off.name=投影仪_影布_左_关
 tile.buildfur.projector_old_column_right_off.name=投影仪_影布_右_关

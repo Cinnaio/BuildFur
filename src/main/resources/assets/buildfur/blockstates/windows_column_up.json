@@ -1,21 +1,21 @@
 {
   "variants": {
     "facing=north": {
-      "model": "buildfur:switch_light_on",
+      "model": "buildfur:windows_column_up",
       "y": 180
     },
     "facing=east": {
-      "model": "buildfur:switch_light_on",
-      "y": 270,
+      "model": "buildfur:windows_column_up",
+      "y": 90,
       "uvlock": false
     },
     "facing=south": {
-      "model": "buildfur:switch_light_on",
+      "model": "buildfur:windows_column_up",
       "uvlock": false
     },
     "facing=west": {
-      "model": "buildfur:switch_light_on",
-      "y": 90,
+      "model": "buildfur:windows_column_up",
+      "y": 270,
       "uvlock": false
     }
   }
