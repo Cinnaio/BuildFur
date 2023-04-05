@@ -9,7 +9,9 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlackboardGreenMiddle extends Block {
@@ -49,6 +51,28 @@ public class BlackboardGreenMiddle extends Block {
     public int getMetaFromState(IBlockState state) {
         int facing = state.getValue(FACING).getHorizontalIndex();
         return facing;
+    }
+
+    @Override
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+
+        AxisAlignedBB AABB_NS = new AxisAlignedBB(0, 0, 0, 1, 1, 0.5);
+        AxisAlignedBB AABB_WE = new AxisAlignedBB(0, 0, 0, 0.5, 1, 1);
+
+        EnumFacing blockFacing = state.getValue(FACING);
+
+        if (blockFacing == EnumFacing.SOUTH || blockFacing == EnumFacing.NORTH) {
+            if (blockFacing == EnumFacing.NORTH)
+                return AABB_NS.offset(0, 0, 0.5);
+            else
+                return AABB_NS;
+        }
+        else {
+            if (blockFacing == EnumFacing.EAST)
+                return AABB_WE;
+            else
+                return AABB_WE.offset(0.5, 0, 0);
+        }
     }
 
     @Override

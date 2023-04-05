@@ -1,29 +1,23 @@
 package cn.mscraft.blocks;
 
 import cn.mscraft.XUST;
+import cn.mscraft.init.BlockLoader;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
-import javax.annotation.Nullable;
-import java.util.List;
 
 public class MarbledFloorGrayOver extends Block {
 
     private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
-
-    protected static final AxisAlignedBB AABB_A = new AxisAlignedBB(0, 0, 0, 1, 1, 1);
-    protected static final AxisAlignedBB AABB_B = new AxisAlignedBB(1, 0, 0, 2, 1, 1);
-    protected static final AxisAlignedBB AABB_C = new AxisAlignedBB(0, 0, 0, 1, 1, -1);
 
     public MarbledFloorGrayOver() {
         super(Material.ROCK);
@@ -59,15 +53,29 @@ public class MarbledFloorGrayOver extends Block {
         return facing;
     }
 
-    @Deprecated
-    public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn, boolean isActualState) {
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_A);
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_B);
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_C);
-    }
-
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
         worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()));
+
+        for (int i = -1; i < 2; i++) {
+            for (int j = -1; j < 2; j++) {
+                if (i == 0 && j == 0)
+                    continue;
+                else
+                    worldIn.setBlockState(new BlockPos((pos.getX() + i), pos.getY(), pos.getZ() + j), Blocks.BARRIER.getDefaultState(), 3);
+            }
+        }
+    }
+
+    @Override
+    public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
+        for (int i = -1; i < 2; i++) {
+            for (int j = -1; j < 2; j++) {
+                if (i == 0 && j == 0)
+                    continue;
+                else
+                    worldIn.setBlockToAir(new BlockPos((pos.getX() + i), pos.getY(), pos.getZ() + j));
+            }
+        }
     }
 }

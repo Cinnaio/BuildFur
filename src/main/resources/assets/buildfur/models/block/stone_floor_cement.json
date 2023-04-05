@@ -2,21 +2,20 @@
 	"credit": "CINNAIO MADED",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "buildfur:block/marbled_floor_red_border",
-		"1": "buildfur:block/concrete_wall_white",
-		"particle": "buildfur:block/marbled_floor_red_border"
+		"0": "buildfur:block/stone_floor_cment",
+		"particle": "buildfur:block/stone_floor_cment"
 	},
 	"elements": [
 		{
 			"from": [0, 0, 0],
 			"to": [16, 16, 16],
 			"faces": {
-				"north": {"uv": [16, 0, 0, 16], "rotation": 270, "texture": "#1"},
-				"east": {"uv": [16, 0, 0, 16], "rotation": 270, "texture": "#1"},
-				"south": {"uv": [16, 0, 0, 16], "rotation": 270, "texture": "#1"},
-				"west": {"uv": [16, 0, 0, 16], "rotation": 270, "texture": "#1"},
-				"up": {"uv": [16, 0, 0, 16], "rotation": 270, "texture": "#0"},
-				"down": {"uv": [16, 0, 0, 16], "rotation": 270, "texture": "#1"}
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
 			}
 		}
 	],

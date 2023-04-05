@@ -36,11 +36,17 @@ public class BlockLoader {
     public static Block WOODEN_CHAIR_TEACHBUILD_ON = new WoodenChairTeachbuildOn();
     public static Block WOODEN_CHAIR_TEACHBUILD_OFF = new WoodenChairTeachbuildOff();
     public static Block WOODEN_TEACHING = new WoodenTeaching();
+    public static Block WOODEN_TEACHFLOOR = new WoodenTeachFloor();
 
     public static Block IRON_TEACHING = new IronTeaching();
     public static Block IRON_HEATING = new IronHeating();
 
     public static Block SWITCH_LIGHT_ON = new SwitchLightOn();
+
+    public static Block STONE_FLOOR_PEOPLEGO_RED = new StoneFloorPeopleGo.Red();
+    public static Block STONE_FLOOR_PEOPLEGO_WHITE = new StoneFloorPeopleGo.White();
+    public static Block STONE_FLOOR_PEOPLEGO_GREEN = new StoneFloorPeopleGo.Green();
+    public static Block STONE_FLOOR_CEMNENT = new StoneFloorCement();
 
     public static Block BLACKBOARD_GREEN_LEFT = new BlackboardGreenLeft();
     public static Block BLACKBOARD_GREEN_MIDDLE = new BlackboardGreenMiddle();
@@ -61,6 +67,9 @@ public class BlockLoader {
     public static Block PROJECTOR_OLD_COLUMN_LEFT_ON = new ProjectorOldColumnLeftOn();
     public static Block PROJECTOR_OLD_COLUMN_RIGHT_ON = new ProjectorOldColumnRightOn();
 
+    /*
+        方块注册区
+     */
     @SubscribeEvent
     public static void registerBlock(RegistryEvent.Register<Block> event){
         // 半砖
@@ -87,11 +96,17 @@ public class BlockLoader {
         event.getRegistry().register(WOODEN_CHAIR_TEACHBUILD_ON.setRegistryName("buildfur:wooden_chair_teachbuild_on"));
         event.getRegistry().register(WOODEN_CHAIR_TEACHBUILD_OFF.setRegistryName("buildfur:wooden_chair_teachbuild_off"));
         event.getRegistry().register(WOODEN_TEACHING.setRegistryName("buildfur:wooden_teaching"));
+        event.getRegistry().register(WOODEN_TEACHFLOOR.setRegistryName("buildfur:wooden_teachfloor"));
 
         event.getRegistry().register(IRON_TEACHING.setRegistryName("buildfur:iron_teaching"));
         event.getRegistry().register(IRON_HEATING.setRegistryName("buildfur:iron_heating"));
 
         event.getRegistry().register(SWITCH_LIGHT_ON.setRegistryName("buildfur:switch_light_on"));
+
+        event.getRegistry().register(STONE_FLOOR_PEOPLEGO_RED.setRegistryName("buildfur:stone_floor_peoplego_red"));
+        event.getRegistry().register(STONE_FLOOR_PEOPLEGO_WHITE.setRegistryName("buildfur:stone_floor_peoplego_white"));
+        event.getRegistry().register(STONE_FLOOR_PEOPLEGO_GREEN.setRegistryName("buildfur:stone_floor_peoplego_green"));
+        event.getRegistry().register(STONE_FLOOR_CEMNENT.setRegistryName("buildfur:stone_floor_cement"));
 
         event.getRegistry().register(BLACKBOARD_GREEN_LEFT.setRegistryName("buildfur:blackboard_green_left"));
         event.getRegistry().register(BLACKBOARD_GREEN_MIDDLE.setRegistryName("buildfur:blackboard_green_middle"));
@@ -113,6 +128,9 @@ public class BlockLoader {
         event.getRegistry().register(PROJECTOR_OLD_COLUMN_RIGHT_ON.setRegistryName("buildfur:projector_old_column_right_on"));
     }
 
+    /*
+        物品模型注册
+     */
     @SubscribeEvent
     public static void registerItemBlockModel(ModelRegistryEvent event){
         // 半砖
@@ -138,11 +156,17 @@ public class BlockLoader {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WOODEN_CHAIR_TEACHBUILD_ON),0,new ModelResourceLocation(WOODEN_CHAIR_TEACHBUILD_ON.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WOODEN_CHAIR_TEACHBUILD_OFF),0,new ModelResourceLocation(WOODEN_CHAIR_TEACHBUILD_OFF.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WOODEN_TEACHING),0,new ModelResourceLocation(WOODEN_TEACHING.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(WOODEN_TEACHFLOOR),0,new ModelResourceLocation(WOODEN_TEACHFLOOR.getRegistryName(),"inventory"));
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IRON_TEACHING),0,new ModelResourceLocation(IRON_TEACHING.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IRON_HEATING),0,new ModelResourceLocation(IRON_HEATING.getRegistryName(),"inventory"));
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(SWITCH_LIGHT_ON),0,new ModelResourceLocation(SWITCH_LIGHT_ON.getRegistryName(),"inventory"));
+
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(STONE_FLOOR_PEOPLEGO_RED),0,new ModelResourceLocation(STONE_FLOOR_PEOPLEGO_RED.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(STONE_FLOOR_PEOPLEGO_WHITE),0,new ModelResourceLocation(STONE_FLOOR_PEOPLEGO_WHITE.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(STONE_FLOOR_PEOPLEGO_GREEN),0,new ModelResourceLocation(STONE_FLOOR_PEOPLEGO_GREEN.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(STONE_FLOOR_CEMNENT),0,new ModelResourceLocation(STONE_FLOOR_CEMNENT.getRegistryName(),"inventory"));
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(BLACKBOARD_GREEN_LEFT),0,new ModelResourceLocation(BLACKBOARD_GREEN_LEFT.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(BLACKBOARD_GREEN_MIDDLE),0,new ModelResourceLocation(BLACKBOARD_GREEN_MIDDLE.getRegistryName(),"inventory"));
@@ -162,6 +186,5 @@ public class BlockLoader {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(PROJECTOR_OLD_COLUMN_RIGHT_OFF),0,new ModelResourceLocation(PROJECTOR_OLD_COLUMN_RIGHT_OFF.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(PROJECTOR_OLD_COLUMN_LEFT_ON),0,new ModelResourceLocation(PROJECTOR_OLD_COLUMN_LEFT_ON.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(PROJECTOR_OLD_COLUMN_RIGHT_ON),0,new ModelResourceLocation(PROJECTOR_OLD_COLUMN_RIGHT_ON.getRegistryName(),"inventory"));
-
     }
 }

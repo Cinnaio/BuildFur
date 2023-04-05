@@ -20,7 +20,6 @@ public class WoodenTeaching extends Block {
         super(Material.ROCK);
         setCreativeTab(XUST.MY_TAB2);
         setUnlocalizedName("buildfur.wooden_teaching");
-        setLightLevel(0.5F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 

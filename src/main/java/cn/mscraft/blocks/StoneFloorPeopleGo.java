@@ -14,15 +14,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlackboardGreenRight extends Block {
+public class StoneFloorPeopleGo extends Block {
 
     private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    public BlackboardGreenRight() {
+    public StoneFloorPeopleGo() {
         super(Material.ROCK);
-        setCreativeTab(XUST.MY_TAB2);
-        setUnlocalizedName("buildfur.blackboard_green_right");
-        setLightLevel(0.5F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 
@@ -54,29 +51,33 @@ public class BlackboardGreenRight extends Block {
     }
 
     @Override
-    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-
-        AxisAlignedBB AABB_NS = new AxisAlignedBB(0, 0, 0, 1, 1, 0.5);
-        AxisAlignedBB AABB_WE = new AxisAlignedBB(0, 0, 0, 0.5, 1, 1);
-
-        EnumFacing blockFacing = state.getValue(FACING);
-
-        if (blockFacing == EnumFacing.SOUTH || blockFacing == EnumFacing.NORTH) {
-            if (blockFacing == EnumFacing.NORTH)
-                return AABB_NS.offset(0, 0, 0.5);
-            else
-                return AABB_NS;
-        }
-        else {
-            if (blockFacing == EnumFacing.EAST)
-                return AABB_WE;
-            else
-                return AABB_WE.offset(0.5, 0, 0);
-        }
+    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing()));
     }
 
     @Override
-    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()));
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+        return new AxisAlignedBB(0, 0, 0, 1, 0.5, 1);
+    }
+
+    public static class Red extends StoneFloorPeopleGo {
+        public Red() {
+            setCreativeTab(XUST.MY_TAB1);
+            setUnlocalizedName(XUST.MODID + "." + "stone_floor_peoplego_red");
+        }
+    }
+
+    public static class White extends StoneFloorPeopleGo {
+        public White() {
+            setCreativeTab(XUST.MY_TAB1);
+            setUnlocalizedName(XUST.MODID + "." + "stone_floor_peoplego_white");
+        }
+    }
+
+    public static class Green extends StoneFloorPeopleGo {
+        public Green() {
+            setCreativeTab(XUST.MY_TAB1);
+            setUnlocalizedName(XUST.MODID + "." + "stone_floor_peoplego_green");
+        }
     }
 }

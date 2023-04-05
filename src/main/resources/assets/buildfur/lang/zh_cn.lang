@@ -21,11 +21,18 @@ tile.buildfur.wooden_chair_teachbuild_head.name=桌凳
 tile.buildfur.wooden_chair_teachbuild_on.name=桌凳_打开
 tile.buildfur.wooden_chair_teachbuild_off.name=桌凳_关闭
 tile.buildfur.wooden_teaching.name=讲台
+tile.buildfur.wooden_teachfloor.name=讲台地板
+tile.buildfur.wooden_teachfloor_border.name=讲台地板
 
 tile.buildfur.iron_teaching.name=多媒体桌
 tile.buildfur.iron_heating.name=暖气片
 
 tile.buildfur.switch_light_on.name=电灯开关_开
+
+tile.buildfur.stone_floor_peoplego_red.name=人行道砖_红
+tile.buildfur.stone_floor_peoplego_white.name=人行道砖_白
+tile.buildfur.stone_floor_peoplego_green.name=人行道砖_绿
+tile.buildfur.stone_floor_cement.name=水泥路
 
 tile.buildfur.blackboard_green_left.name=黑板_左
 tile.buildfur.blackboard_green_middle.name=黑板_中

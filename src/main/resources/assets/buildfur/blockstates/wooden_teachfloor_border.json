@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "buildfur:wooden_teachfloor_border",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "buildfur:wooden_teachfloor_border",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=south": {
+      "model": "buildfur:wooden_teachfloor_border",
+      "uvlock": false
+    },
+    "facing=west": {
+      "model": "buildfur:wooden_teachfloor_border",
+      "y": 270,
+      "uvlock": false
+    }
+  }
+}

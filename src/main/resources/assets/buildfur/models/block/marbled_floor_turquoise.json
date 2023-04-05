@@ -1,20 +1,22 @@
 {
 	"credit": "CINNAIO MADED",
+	"texture_size": [64, 64],
 	"textures": {
 		"0": "buildfur:block/marbled_floor_turquoise",
+		"1": "buildfur:block/concrete_wall_white",
 		"particle": "buildfur:block/marbled_floor_turquoise"
 	},
 	"elements": [
 		{
 			"from": [-16, 0, -16],
-			"to": [16, 16, 16],
+			"to": [32, 16, 32],
 			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"north": {"uv": [0, 0, 16, 8.375], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 8.375], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 8.375], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 8.375], "texture": "#0"},
 				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+				"down": {"uv": [0, 0, 16, 16], "texture": "#1"}
 			}
 		}
 	],
@@ -22,20 +24,20 @@
 		"thirdperson_righthand": {
 			"rotation": [36, 0, 0],
 			"translation": [0, 0, -2.5],
-			"scale": [0.25, 0.5, 0.25]
+			"scale": [0.15, 0.3, 0.15]
 		},
 		"thirdperson_lefthand": {
 			"rotation": [36, 0, 0],
 			"translation": [0, 0, -2.5],
-			"scale": [0.25, 0.5, 0.25]
+			"scale": [0.15, 0.3, 0.15]
 		},
 		"firstperson_righthand": {
 			"translation": [0, 1.75, 0],
-			"scale": [0.2, 0.4, 0.2]
+			"scale": [0.15, 0.3, 0.08]
 		},
 		"firstperson_lefthand": {
 			"translation": [0, 1.75, 0],
-			"scale": [0.2, 0.4, 0.2]
+			"scale": [0.15, 0.3, 0.08]
 		},
 		"ground": {
 			"translation": [0, -1, 0],
@@ -43,8 +45,8 @@
 		},
 		"gui": {
 			"rotation": [17, -42, 0],
-			"translation": [0.25, -1, 0],
-			"scale": [0.25, 0.5, 0.25]
+			"translation": [0.25, -0.5, 0],
+			"scale": [0.15, 0.3, 0.15]
 		},
 		"head": {
 			"translation": [0, -27, -2],

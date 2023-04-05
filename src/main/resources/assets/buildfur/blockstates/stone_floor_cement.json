@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "buildfur:stone_floor_cement",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "buildfur:stone_floor_cement",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=south": {
+      "model": "buildfur:stone_floor_cement",
+      "uvlock": false
+    },
+    "facing=west": {
+      "model": "buildfur:stone_floor_cement",
+      "y": 270,
+      "uvlock": false
+    }
+  }
+}

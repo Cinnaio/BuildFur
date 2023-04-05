@@ -10,6 +10,9 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber
 public class ItemLoader {
+    /*
+        物品注册
+     */
     @SubscribeEvent
     public static void registerItem(RegistryEvent.Register<Item> event){
         // 半砖
@@ -35,11 +38,17 @@ public class ItemLoader {
         event.getRegistry().register(new ItemBlock(BlockLoader.WOODEN_CHAIR_TEACHBUILD_ON).setRegistryName("buildfur:wooden_chair_teachbuild_on"));
         event.getRegistry().register(new ItemBlock(BlockLoader.WOODEN_CHAIR_TEACHBUILD_OFF).setRegistryName("buildfur:wooden_chair_teachbuild_off"));
         event.getRegistry().register(new ItemBlock(BlockLoader.WOODEN_TEACHING).setRegistryName("buildfur:wooden_teaching"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.WOODEN_TEACHFLOOR).setRegistryName("buildfur:wooden_teachfloor"));
 
         event.getRegistry().register(new ItemBlock(BlockLoader.IRON_TEACHING).setRegistryName("buildfur:iron_teaching"));
         event.getRegistry().register(new ItemBlock(BlockLoader.IRON_HEATING).setRegistryName("buildfur:iron_heating"));
 
         event.getRegistry().register(new ItemBlock(BlockLoader.SWITCH_LIGHT_ON).setRegistryName("buildfur:switch_light_on"));
+
+        event.getRegistry().register(new ItemBlock(BlockLoader.STONE_FLOOR_PEOPLEGO_RED).setRegistryName("buildfur:stone_floor_peoplego_red"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.STONE_FLOOR_PEOPLEGO_WHITE).setRegistryName("buildfur:stone_floor_peoplego_white"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.STONE_FLOOR_PEOPLEGO_GREEN).setRegistryName("buildfur:stone_floor_peoplego_green"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.STONE_FLOOR_CEMNENT).setRegistryName("buildfur:stone_floor_cement"));
 
         event.getRegistry().register(new ItemBlock(BlockLoader.BLACKBOARD_GREEN_LEFT).setRegistryName("buildfur:blackboard_green_left"));
         event.getRegistry().register(new ItemBlock(BlockLoader.BLACKBOARD_GREEN_MIDDLE).setRegistryName("buildfur:blackboard_green_middle"));
