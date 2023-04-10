@@ -14,14 +14,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlackboardGreenMiddle extends Block {
+public class ProjectorOldColumn extends Block {
 
     private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    public BlackboardGreenMiddle() {
+    public ProjectorOldColumn() {
         super(Material.ROCK);
-        setCreativeTab(XUST.MY_TAB2);
-        setUnlocalizedName("buildfur.blackboard_green_middle");
         setLightLevel(0.5F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
@@ -77,6 +75,36 @@ public class BlackboardGreenMiddle extends Block {
 
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()));
+        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite().getOpposite()));
     }
+
+    public static class LeftOn extends ProjectorOldColumn {
+        public LeftOn() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.projector_old_column_left_on");
+        }
+    }
+
+    public static class LeftOff extends ProjectorOldColumn {
+        public LeftOff() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.projector_old_column_left_off");
+        }
+    }
+    public static class RightOn extends ProjectorOldColumn {
+        public RightOn() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.projector_old_column_right_on");
+        }
+    }
+
+    public static class RightOff extends ProjectorOldColumn {
+        public RightOff() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.projector_old_column_right_off");
+        }
+    }
+
+
+
 }

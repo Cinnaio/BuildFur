@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "buildfur:tile_baseboards_blue",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "buildfur:tile_baseboards_blue",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=south": {
+      "model": "buildfur:tile_baseboards_blue",
+      "uvlock": false
+    },
+    "facing=west": {
+      "model": "buildfur:tile_baseboards_blue",
+      "y": 270,
+      "uvlock": false
+    }
+  }
+}

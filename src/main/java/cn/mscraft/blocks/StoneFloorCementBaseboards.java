@@ -14,15 +14,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class ProjectorOldColumnRightOff extends Block {
+public class StoneFloorCementBaseboards extends Block {
 
     private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    public ProjectorOldColumnRightOff() {
+    public StoneFloorCementBaseboards() {
         super(Material.ROCK);
-        setCreativeTab(XUST.MY_TAB2);
-        setUnlocalizedName("buildfur.projector_old_column_right_off");
-        setLightLevel(0.5F);
+        setCreativeTab(XUST.MY_TAB1);
+        setUnlocalizedName(XUST.MODID + "." + "stone_floor_cement_baseboards");
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 
@@ -54,16 +53,21 @@ public class ProjectorOldColumnRightOff extends Block {
     }
 
     @Override
+    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing()));
+    }
+
+    @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
 
-        AxisAlignedBB AABB_NS = new AxisAlignedBB(0, 0, 0, 1, 1, 0.5);
-        AxisAlignedBB AABB_WE = new AxisAlignedBB(0, 0, 0, 0.5, 1, 1);
+        AxisAlignedBB AABB_NS = new AxisAlignedBB(0, 0, 0, 1, 0.5, 0.25);
+        AxisAlignedBB AABB_WE = new AxisAlignedBB(0, 0, 0, 0.25, 0.5, 1);
 
         EnumFacing blockFacing = state.getValue(FACING);
 
         if (blockFacing == EnumFacing.SOUTH || blockFacing == EnumFacing.NORTH) {
-            if (blockFacing == EnumFacing.NORTH)
-                return AABB_NS.offset(0, 0, 0.5);
+            if (blockFacing == EnumFacing.SOUTH)
+                return AABB_NS.offset(0, 0, 0.75);
             else
                 return AABB_NS;
         }
@@ -71,12 +75,7 @@ public class ProjectorOldColumnRightOff extends Block {
             if (blockFacing == EnumFacing.EAST)
                 return AABB_WE;
             else
-                return AABB_WE.offset(0.5, 0, 0);
+                return AABB_WE.offset(0.75, 0, 0);
         }
-    }
-
-    @Override
-    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite().getOpposite()));
     }
 }

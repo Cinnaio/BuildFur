@@ -20,8 +20,6 @@ public class ConcreteWallWhite extends Block {
 
     public ConcreteWallWhite() {
         super(Material.ROCK);
-        setCreativeTab(XUST.MY_TAB1);
-        setUnlocalizedName("buildfur.concrete_wall_white");
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 
@@ -65,5 +63,19 @@ public class ConcreteWallWhite extends Block {
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
         worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()));
+    }
+
+    public static class Typical extends ConcreteWallWhite {
+        public Typical() {
+            setCreativeTab(XUST.MY_TAB1);
+            setUnlocalizedName("buildfur.concrete_wall_white");
+        }
+    }
+
+    public static class Half extends ConcreteWallWhite {
+        public Half() {
+            setCreativeTab(XUST.MY_TAB1);
+            setUnlocalizedName("buildfur.concrete_wall_white_half");
+        }
     }
 }

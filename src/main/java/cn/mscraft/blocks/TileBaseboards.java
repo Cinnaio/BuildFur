@@ -12,14 +12,12 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class WoodenDeskBirchMiddle extends Block {
+public class TileBaseboards extends Block {
 
     private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    public WoodenDeskBirchMiddle() {
+    public TileBaseboards() {
         super(Material.ROCK);
-        setCreativeTab(XUST.MY_TAB2);
-        setUnlocalizedName("buildfur.wooden_desk_birch_middle");
         setLightLevel(0.5F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
@@ -53,6 +51,20 @@ public class WoodenDeskBirchMiddle extends Block {
 
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()));
+        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing()));
+    }
+
+    public static class Orange extends TileBaseboards {
+        public Orange() {
+            setCreativeTab(XUST.MY_TAB1);
+            setUnlocalizedName("buildfur.tile_baseboards_orange");
+        }
+    }
+
+    public static class Blue extends TileBaseboards {
+        public Blue() {
+            setCreativeTab(XUST.MY_TAB1);
+            setUnlocalizedName("buildfur.tile_baseboards_blue");
+        }
     }
 }

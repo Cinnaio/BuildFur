@@ -14,14 +14,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class ProjectorOldColumnLeftOn extends Block {
+public class DoorCommonWindow extends Block {
 
     private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    public ProjectorOldColumnLeftOn() {
+    public DoorCommonWindow() {
         super(Material.ROCK);
-        setCreativeTab(XUST.MY_TAB2);
-        setUnlocalizedName("buildfur.projector_old_column_left_on");
         setLightLevel(0.5F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
@@ -54,29 +52,28 @@ public class ProjectorOldColumnLeftOn extends Block {
     }
 
     @Override
-    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing()));
+    }
 
-        AxisAlignedBB AABB_NS = new AxisAlignedBB(0, 0, 0, 1, 1, 0.5);
-        AxisAlignedBB AABB_WE = new AxisAlignedBB(0, 0, 0, 0.5, 1, 1);
-
-        EnumFacing blockFacing = state.getValue(FACING);
-
-        if (blockFacing == EnumFacing.SOUTH || blockFacing == EnumFacing.NORTH) {
-            if (blockFacing == EnumFacing.NORTH)
-                return AABB_NS.offset(0, 0, 0.5);
-            else
-                return AABB_NS;
-        }
-        else {
-            if (blockFacing == EnumFacing.EAST)
-                return AABB_WE;
-            else
-                return AABB_WE.offset(0.5, 0, 0);
+    public static class Up extends DoorCommonWindow {
+        public Up() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.door_common_windows_up");
         }
     }
 
-    @Override
-    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite().getOpposite()));
+    public static class Down extends DoorCommonWindow {
+        public Down() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.door_common_windows_down");
+        }
+    }
+
+    public static class DownDown extends DoorCommonWindow {
+        public DownDown() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.door_common_windows_down_down");
+        }
     }
 }

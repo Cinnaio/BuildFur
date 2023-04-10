@@ -8,11 +8,15 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class MarbledFloorGrayOver extends Block {
@@ -78,4 +82,17 @@ public class MarbledFloorGrayOver extends Block {
             }
         }
     }
+
+//    @Deprecated
+//    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
+//        Block block = worldIn.getBlockState(fromPos).getBlock();
+//        EntityPlayer p = Minecraft.getMinecraft().world.getPlayerEntityByName("Cinnaio");
+//
+//        if (block == Blocks.BARRIER) {
+//            breakBlock(worldIn, pos, state);
+//            p.sendMessage(new TextComponentString("yes from is barrier"));
+//        }
+//        else
+//            p.sendMessage(new TextComponentString("no"));
+//    }
 }

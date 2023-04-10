@@ -9,17 +9,17 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class WoodenChairBirchDouble extends Block {
+public class BlackboardGreen extends Block {
 
     private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    public WoodenChairBirchDouble() {
+    public BlackboardGreen() {
         super(Material.ROCK);
-        setCreativeTab(XUST.MY_TAB2);
-        setUnlocalizedName("buildfur.wooden_chair_birch_double");
         setLightLevel(0.5F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
@@ -52,7 +52,50 @@ public class WoodenChairBirchDouble extends Block {
     }
 
     @Override
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+
+        AxisAlignedBB AABB_NS = new AxisAlignedBB(0, 0, 0, 1, 1, 0.5);
+        AxisAlignedBB AABB_WE = new AxisAlignedBB(0, 0, 0, 0.5, 1, 1);
+
+        EnumFacing blockFacing = state.getValue(FACING);
+
+        if (blockFacing == EnumFacing.SOUTH || blockFacing == EnumFacing.NORTH) {
+            if (blockFacing == EnumFacing.NORTH)
+                return AABB_NS.offset(0, 0, 0.5);
+            else
+                return AABB_NS;
+        }
+        else {
+            if (blockFacing == EnumFacing.EAST)
+                return AABB_WE;
+            else
+                return AABB_WE.offset(0.5, 0, 0);
+        }
+    }
+
+    @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
         worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()));
+    }
+
+    public static class Left extends BlackboardGreen {
+        public Left() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.blackboard_green_left");
+        }
+    }
+
+    public static class Middle extends BlackboardGreen {
+        public Middle() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.blackboard_green_middle");
+        }
+    }
+
+    public static class Right extends BlackboardGreen {
+        public Right() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.blackboard_green_right");
+        }
     }
 }

@@ -17,8 +17,8 @@ public class BlockLoader {
     public static MarbledFloorGray MARBLED_FLOOR_GRAY_DOUBLE = new MarbledFloorGray.Double();
 
     // 其他
-    public static Block CONCRETE_WALL_WHITE = new ConcreteWallWhite();
-    public static Block CONCRETE_WALL_WHITE_HALF = new ConcreteWallWhiteHalf();
+    public static Block CONCRETE_WALL_WHITE = new ConcreteWallWhite.Typical();
+    public static Block CONCRETE_WALL_WHITE_HALF = new ConcreteWallWhite.Half();
     public static Block CONCRETE_CEILING_COLUMN_WHITE = new ConcreteCeilingColumnWhite();
     public static Block CONCRETE_COLUMN_WHITE = new ConcreteColumnWhite();
 
@@ -28,13 +28,13 @@ public class BlockLoader {
     public static Block MARBLED_FLOOR_RED = new MarbledFloorRed();
     public static Block MARBLED_FLOOR_RED_BORDER = new MarbledFloorRedBorder();
 
-    public static Block WOODEN_DESK_BIRCH = new WoodenDeskBirch();
-    public static Block WOODEN_DESK_BIRCH_MIDDLE = new WoodenDeskBirchMiddle();
-    public static Block WOODEN_CHAIR_BIRCH = new WoodenChairBirch();
-    public static Block WOODEN_CHAIR_BIRCH_DOUBLE = new WoodenChairBirchDouble();
-    public static Block WOODEN_CHAIR_TEACHBUILD_HEAD = new WoodenChairTeachbuildHead();
-    public static Block WOODEN_CHAIR_TEACHBUILD_ON = new WoodenChairTeachbuildOn();
-    public static Block WOODEN_CHAIR_TEACHBUILD_OFF = new WoodenChairTeachbuildOff();
+    public static Block WOODEN_DESK_BIRCH = new WoodenDeskBirch.Typical();
+    public static Block WOODEN_DESK_BIRCH_MIDDLE = new WoodenDeskBirch.Middle();
+    public static Block WOODEN_CHAIR_BIRCH = new WoodenChairBirch.Typical();
+    public static Block WOODEN_CHAIR_BIRCH_DOUBLE = new WoodenChairBirch.Double();
+    public static Block WOODEN_CHAIR_TEACHBUILD_HEAD = new WoodenChairTeachbuild.Head();
+    public static Block WOODEN_CHAIR_TEACHBUILD_ON = new WoodenChairTeachbuild.On();
+    public static Block WOODEN_CHAIR_TEACHBUILD_OFF = new WoodenChairTeachbuild.Off();
     public static Block WOODEN_TEACHING = new WoodenTeaching();
     public static Block WOODEN_TEACHFLOOR = new WoodenTeachFloor();
 
@@ -43,29 +43,42 @@ public class BlockLoader {
 
     public static Block SWITCH_LIGHT_ON = new SwitchLightOn();
 
+    public static Block DOOR_COMMON_WINDOW_UP = new DoorCommonWindow.Up();
+    public static Block DOOR_COMMON_WINDOW_DOWN = new DoorCommonWindow.Down();
+    public static Block DOOR_COMMON_WINDOW_DOWN_DOWN = new DoorCommonWindow.DownDown();
+    public static Block DOOR_COMMON_DOWN_OFF = new DoorCommon.DownOff();
+    public static Block DOOR_COMMON_DOWN_ON = new DoorCommon.DownOn();
+    public static Block DOOR_COMMON_UP_OFF = new DoorCommon.UpOff();
+    public static Block DOOR_COMMON_UP_ON = new DoorCommon.UpOn();
+
     public static Block STONE_FLOOR_PEOPLEGO_RED = new StoneFloorPeopleGo.Red();
     public static Block STONE_FLOOR_PEOPLEGO_WHITE = new StoneFloorPeopleGo.White();
     public static Block STONE_FLOOR_PEOPLEGO_GREEN = new StoneFloorPeopleGo.Green();
-    public static Block STONE_FLOOR_CEMNENT = new StoneFloorCement();
+    public static Block STONE_FLOOR_CEMENT = new StoneFloorCement();
+    public static Block STONE_FLOOR_CEMENT_OVER = new StoneFloorCementOver();
+    public static Block STONE_FLOOR_CEMENT_BASEBOARDS = new StoneFloorCementBaseboards();
 
-    public static Block BLACKBOARD_GREEN_LEFT = new BlackboardGreenLeft();
-    public static Block BLACKBOARD_GREEN_MIDDLE = new BlackboardGreenMiddle();
-    public static Block BLACKBOARD_GREEN_RIGHT = new BlackboardGreenRight();
+    public static Block BLACKBOARD_GREEN_LEFT = new BlackboardGreen.Left();
+    public static Block BLACKBOARD_GREEN_MIDDLE = new BlackboardGreen.Middle();
+    public static Block BLACKBOARD_GREEN_RIGHT = new BlackboardGreen.Right();
 
     public static Block CEILING_LIGHT = new CeilingLight();
     public static Block CEILING_LIGHT_WALL = new CeilingLightWall();
 
-    public static Block WINDOWS_COLUMN_DOWN = new WindowColumnDown();
-    public static Block WINDOWS_COLUMN_UP = new WindowColumnUp();
+    public static Block WINDOWS_COLUMN_DOWN = new WindowColumn.Down();
+    public static Block WINDOWS_COLUMN_UP = new WindowColumn.Up();
 
     public static Block CURTAIN_TEACH = new CurtainTeach();
     public static Block CURTAIN_TEACH_CLOTH = new CurtainTeachCloth();
 
+    public static Block TILE_BASEBOARDS_ORANGE = new TileBaseboards.Orange();
+    public static Block TILE_BASEBOARDS_BLUE = new TileBaseboards.Blue();
+
     public static Block PROJECTOR_OLD = new ProjectorOld();
-    public static Block PROJECTOR_OLD_COLUMN_LEFT_OFF = new ProjectorOldColumnLeftOff();
-    public static Block PROJECTOR_OLD_COLUMN_RIGHT_OFF = new ProjectorOldColumnRightOff();
-    public static Block PROJECTOR_OLD_COLUMN_LEFT_ON = new ProjectorOldColumnLeftOn();
-    public static Block PROJECTOR_OLD_COLUMN_RIGHT_ON = new ProjectorOldColumnRightOn();
+    public static Block PROJECTOR_OLD_COLUMN_LEFT_OFF = new ProjectorOldColumn.LeftOff();
+    public static Block PROJECTOR_OLD_COLUMN_RIGHT_OFF = new ProjectorOldColumn.RightOff();
+    public static Block PROJECTOR_OLD_COLUMN_LEFT_ON = new ProjectorOldColumn.LeftOn();
+    public static Block PROJECTOR_OLD_COLUMN_RIGHT_ON = new ProjectorOldColumn.RightOn();
 
     /*
         方块注册区
@@ -103,10 +116,20 @@ public class BlockLoader {
 
         event.getRegistry().register(SWITCH_LIGHT_ON.setRegistryName("buildfur:switch_light_on"));
 
+        event.getRegistry().register(DOOR_COMMON_WINDOW_UP.setRegistryName("buildfur:door_common_windows_up"));
+        event.getRegistry().register(DOOR_COMMON_WINDOW_DOWN.setRegistryName("buildfur:door_common_windows_down"));
+        event.getRegistry().register(DOOR_COMMON_WINDOW_DOWN_DOWN.setRegistryName("buildfur:door_common_windows_down_down"));
+        event.getRegistry().register(DOOR_COMMON_DOWN_OFF.setRegistryName("buildfur:door_common_down_off"));
+        event.getRegistry().register(DOOR_COMMON_DOWN_ON.setRegistryName("buildfur:door_common_down_on"));
+        event.getRegistry().register(DOOR_COMMON_UP_OFF.setRegistryName("buildfur:door_common_up_off"));
+        event.getRegistry().register(DOOR_COMMON_UP_ON.setRegistryName("buildfur:door_common_up_on"));
+
         event.getRegistry().register(STONE_FLOOR_PEOPLEGO_RED.setRegistryName("buildfur:stone_floor_peoplego_red"));
         event.getRegistry().register(STONE_FLOOR_PEOPLEGO_WHITE.setRegistryName("buildfur:stone_floor_peoplego_white"));
         event.getRegistry().register(STONE_FLOOR_PEOPLEGO_GREEN.setRegistryName("buildfur:stone_floor_peoplego_green"));
-        event.getRegistry().register(STONE_FLOOR_CEMNENT.setRegistryName("buildfur:stone_floor_cement"));
+        event.getRegistry().register(STONE_FLOOR_CEMENT.setRegistryName("buildfur:stone_floor_cement"));
+        event.getRegistry().register(STONE_FLOOR_CEMENT_OVER.setRegistryName("buildfur:stone_floor_cement_over"));
+        event.getRegistry().register(STONE_FLOOR_CEMENT_BASEBOARDS.setRegistryName("buildfur:stone_floor_cement_baseboards"));
 
         event.getRegistry().register(BLACKBOARD_GREEN_LEFT.setRegistryName("buildfur:blackboard_green_left"));
         event.getRegistry().register(BLACKBOARD_GREEN_MIDDLE.setRegistryName("buildfur:blackboard_green_middle"));
@@ -120,6 +143,9 @@ public class BlockLoader {
 
         event.getRegistry().register(CURTAIN_TEACH.setRegistryName("buildfur:curtain_teach"));
         event.getRegistry().register(CURTAIN_TEACH_CLOTH.setRegistryName("buildfur:curtain_teach_cloth"));
+
+        event.getRegistry().register(TILE_BASEBOARDS_ORANGE.setRegistryName("buildfur:tile_baseboards_orange"));
+        event.getRegistry().register(TILE_BASEBOARDS_BLUE.setRegistryName("buildfur:tile_baseboards_blue"));
 
         event.getRegistry().register(PROJECTOR_OLD.setRegistryName("buildfur:projector_old"));
         event.getRegistry().register(PROJECTOR_OLD_COLUMN_LEFT_OFF.setRegistryName("buildfur:projector_old_column_left_off"));
@@ -163,10 +189,20 @@ public class BlockLoader {
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(SWITCH_LIGHT_ON),0,new ModelResourceLocation(SWITCH_LIGHT_ON.getRegistryName(),"inventory"));
 
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DOOR_COMMON_WINDOW_UP),0,new ModelResourceLocation(DOOR_COMMON_WINDOW_UP.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DOOR_COMMON_WINDOW_DOWN),0,new ModelResourceLocation(DOOR_COMMON_WINDOW_DOWN.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DOOR_COMMON_WINDOW_DOWN_DOWN),0,new ModelResourceLocation(DOOR_COMMON_WINDOW_DOWN_DOWN.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DOOR_COMMON_DOWN_OFF),0,new ModelResourceLocation(DOOR_COMMON_DOWN_OFF.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DOOR_COMMON_DOWN_ON),0,new ModelResourceLocation(DOOR_COMMON_DOWN_ON.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DOOR_COMMON_UP_OFF),0,new ModelResourceLocation(DOOR_COMMON_UP_OFF.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(DOOR_COMMON_UP_ON),0,new ModelResourceLocation(DOOR_COMMON_UP_ON.getRegistryName(),"inventory"));
+
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(STONE_FLOOR_PEOPLEGO_RED),0,new ModelResourceLocation(STONE_FLOOR_PEOPLEGO_RED.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(STONE_FLOOR_PEOPLEGO_WHITE),0,new ModelResourceLocation(STONE_FLOOR_PEOPLEGO_WHITE.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(STONE_FLOOR_PEOPLEGO_GREEN),0,new ModelResourceLocation(STONE_FLOOR_PEOPLEGO_GREEN.getRegistryName(),"inventory"));
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(STONE_FLOOR_CEMNENT),0,new ModelResourceLocation(STONE_FLOOR_CEMNENT.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(STONE_FLOOR_CEMENT),0,new ModelResourceLocation(STONE_FLOOR_CEMENT.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(STONE_FLOOR_CEMENT_OVER),0,new ModelResourceLocation(STONE_FLOOR_CEMENT_OVER.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(STONE_FLOOR_CEMENT_BASEBOARDS),0,new ModelResourceLocation(STONE_FLOOR_CEMENT_BASEBOARDS.getRegistryName(),"inventory"));
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(BLACKBOARD_GREEN_LEFT),0,new ModelResourceLocation(BLACKBOARD_GREEN_LEFT.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(BLACKBOARD_GREEN_MIDDLE),0,new ModelResourceLocation(BLACKBOARD_GREEN_MIDDLE.getRegistryName(),"inventory"));
@@ -180,6 +216,9 @@ public class BlockLoader {
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(CURTAIN_TEACH),0,new ModelResourceLocation(CURTAIN_TEACH.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(CURTAIN_TEACH_CLOTH),0,new ModelResourceLocation(CURTAIN_TEACH_CLOTH.getRegistryName(),"inventory"));
+
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(TILE_BASEBOARDS_ORANGE),0,new ModelResourceLocation(TILE_BASEBOARDS_ORANGE.getRegistryName(),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(TILE_BASEBOARDS_BLUE),0,new ModelResourceLocation(TILE_BASEBOARDS_BLUE.getRegistryName(),"inventory"));
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(PROJECTOR_OLD),0,new ModelResourceLocation(PROJECTOR_OLD.getRegistryName(),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(PROJECTOR_OLD_COLUMN_LEFT_OFF),0,new ModelResourceLocation(PROJECTOR_OLD_COLUMN_LEFT_OFF.getRegistryName(),"inventory"));

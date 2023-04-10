@@ -18,8 +18,6 @@ public class WoodenChairBirch extends Block {
 
     public WoodenChairBirch() {
         super(Material.ROCK);
-        setCreativeTab(XUST.MY_TAB2);
-        setUnlocalizedName("buildfur.wooden_chair_birch");
         setLightLevel(0.5F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
@@ -54,5 +52,19 @@ public class WoodenChairBirch extends Block {
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
         worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()));
+    }
+
+    public static class Typical extends WoodenChairBirch {
+        public Typical() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.wooden_chair_birch");
+        }
+    }
+
+    public static class Double extends WoodenChairBirch {
+        public Double() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.wooden_chair_birch_double");
+        }
     }
 }

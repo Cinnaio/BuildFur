@@ -12,14 +12,12 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class WoodenChairTeachbuildOn extends Block {
+public class DoorCommon extends Block {
 
     private static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    public WoodenChairTeachbuildOn() {
+    public DoorCommon() {
         super(Material.ROCK);
-        setCreativeTab(XUST.MY_TAB2);
-        setUnlocalizedName("buildfur.wooden_chair_teachbuild_on");
         setLightLevel(0.5F);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
@@ -51,22 +49,36 @@ public class WoodenChairTeachbuildOn extends Block {
         return facing;
     }
 
-//    @Override
-//    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-//        int blockFacing = state.getValue(FACING).getHorizontalIndex();
-//
-//        if (blockFacing == 2 || blockFacing == 0) {
-//            AxisAlignedBB AABB = new AxisAlignedBB(0, 0, 0.2, 1, 1, 0.8);
-//            return AABB.offset(0, 0, -1);
-//        }
-//        else {
-//            AxisAlignedBB AABB = new AxisAlignedBB(0.2, 0, 0, 0.8, 1, 1);
-//            return AABB.offset(1, 0, 0);
-//        }
-//    }
-
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()));
+        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing()));
+    }
+
+    public static class DownOff extends DoorCommon {
+        public DownOff() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.door_common_down_off");
+        }
+    }
+
+    public static class DownOn extends DoorCommon {
+        public DownOn() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.door_common_down_on");
+        }
+    }
+
+    public static class UpOff extends DoorCommon {
+        public UpOff() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.door_common_up_off");
+        }
+    }
+
+    public static class UpOn extends DoorCommon {
+        public UpOn() {
+            setCreativeTab(XUST.MY_TAB2);
+            setUnlocalizedName("buildfur.door_common_up_on");
+        }
     }
 }

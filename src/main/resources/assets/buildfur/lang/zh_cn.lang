@@ -29,10 +29,19 @@ tile.buildfur.iron_heating.name=暖气片
 
 tile.buildfur.switch_light_on.name=电灯开关_开
 
+tile.buildfur.door_common_windows_up.name=大楼门_窗户_上
+tile.buildfur.door_common_windows_down.name=大楼门_窗户_下
+tile.buildfur.door_common_windows_down_down.name=大楼门_窗户_下_下
+tile.buildfur.door_common_down_off.name=大楼门_下_关
+tile.buildfur.door_common_down_on.name=大楼门_下_开
+tile.buildfur.door_common_up_off.name=大楼门_上_关
+tile.buildfur.door_common_up_on.name=大楼门_上_开
+
 tile.buildfur.stone_floor_peoplego_red.name=人行道砖_红
 tile.buildfur.stone_floor_peoplego_white.name=人行道砖_白
 tile.buildfur.stone_floor_peoplego_green.name=人行道砖_绿
 tile.buildfur.stone_floor_cement.name=水泥路
+tile.buildfur.stone_floor_cement_baseboards.name=水泥路_踢脚线
 
 tile.buildfur.blackboard_green_left.name=黑板_左
 tile.buildfur.blackboard_green_middle.name=黑板_中
@@ -46,6 +55,9 @@ tile.buildfur.windows_column_up.name=窗户_上部
 
 tile.buildfur.curtain_teach.name=窗帘_杆
 tile.buildfur.curtain_teach_cloth.name=窗帘_布
+
+tile.buildfur.tile_baseboards_orange.name=大楼外墙_橙黄色
+tile.buildfur.tile_baseboards_blue.name=大楼外墙_蓝白色
 
 tile.buildfur.projector_old.name=投影仪_旧
 tile.buildfur.projector_old_column_left_off.name=投影仪_影布_左_关

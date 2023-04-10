@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "buildfur:door_common_windows_down",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "buildfur:door_common_windows_down",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=south": {
+      "model": "buildfur:door_common_windows_down",
+      "uvlock": false
+    },
+    "facing=west": {
+      "model": "buildfur:door_common_windows_down",
+      "y": 270,
+      "uvlock": false
+    }
+  }
+}

@@ -45,10 +45,20 @@ public class ItemLoader {
 
         event.getRegistry().register(new ItemBlock(BlockLoader.SWITCH_LIGHT_ON).setRegistryName("buildfur:switch_light_on"));
 
+        event.getRegistry().register(new ItemBlock(BlockLoader.DOOR_COMMON_WINDOW_UP).setRegistryName("buildfur:door_common_windows_up"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.DOOR_COMMON_WINDOW_DOWN).setRegistryName("buildfur:door_common_windows_down"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.DOOR_COMMON_WINDOW_DOWN_DOWN).setRegistryName("buildfur:door_common_windows_down_down"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.DOOR_COMMON_DOWN_OFF).setRegistryName("buildfur:door_common_down_off"));
+//        event.getRegistry().register(new ItemBlock(BlockLoader.DOOR_COMMON_DOWN_ON).setRegistryName("buildfur:door_common_down_on"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.DOOR_COMMON_UP_OFF).setRegistryName("buildfur:door_common_up_off"));
+//        event.getRegistry().register(new ItemBlock(BlockLoader.DOOR_COMMON_UP_ON).setRegistryName("buildfur:door_common_up_on"));
+
         event.getRegistry().register(new ItemBlock(BlockLoader.STONE_FLOOR_PEOPLEGO_RED).setRegistryName("buildfur:stone_floor_peoplego_red"));
         event.getRegistry().register(new ItemBlock(BlockLoader.STONE_FLOOR_PEOPLEGO_WHITE).setRegistryName("buildfur:stone_floor_peoplego_white"));
         event.getRegistry().register(new ItemBlock(BlockLoader.STONE_FLOOR_PEOPLEGO_GREEN).setRegistryName("buildfur:stone_floor_peoplego_green"));
-        event.getRegistry().register(new ItemBlock(BlockLoader.STONE_FLOOR_CEMNENT).setRegistryName("buildfur:stone_floor_cement"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.STONE_FLOOR_CEMENT).setRegistryName("buildfur:stone_floor_cement"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.STONE_FLOOR_CEMENT_OVER).setRegistryName("buildfur:stone_floor_cement_over"));
+        event.getRegistry().register(new ItemBlock(BlockLoader.STONE_FLOOR_CEMENT_BASEBOARDS).setRegistryName("buildfur:stone_floor_cement_baseboards"));
 
         event.getRegistry().register(new ItemBlock(BlockLoader.BLACKBOARD_GREEN_LEFT).setRegistryName("buildfur:blackboard_green_left"));
         event.getRegistry().register(new ItemBlock(BlockLoader.BLACKBOARD_GREEN_MIDDLE).setRegistryName("buildfur:blackboard_green_middle"));
